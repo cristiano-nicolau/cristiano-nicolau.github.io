@@ -270,6 +270,11 @@ section {
   position: relative;
 }
 
+
+#skills {
+  position: relative;
+}
+
 .about-containers {
   gap: 2rem;
   margin-bottom: 1.0rem;
@@ -311,6 +316,9 @@ section {
 
 .arrow-up:hover {
   transform: translateY(-1.5px);
+}
+
+
 }
 .details-container {
   padding: 1.0rem;
