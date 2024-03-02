@@ -1,2 +1,5 @@
-# portfolio
-personal website
+# personal website
+
+### next Updates:
+- Projects
+- Night mode
