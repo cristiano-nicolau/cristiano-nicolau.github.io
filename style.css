@@ -298,24 +298,40 @@ section {
 
 .arrow {
   position: absolute;
+  background-color: white;
   right: -5rem;
   bottom: 2.5rem;
-  background-color: #ebebeb;
-  border-radius: 40%;
+  border-radius: 50%;
+  padding: 0.5rem; /* Adicionei um preenchimento para tornar o elemento clicável */
+  cursor: pointer;
+  filter: invert(100%);
+  transition: filter 0.5s ease, transform 0.5s ease;
 }
 
 .arrow:hover {
-  transform: translateY(1.5px);
+  background-color: white;
+  filter: invert(0%) !important;
+  transform: rotate(360deg) translateY(1.5px);
 }
+
+
+
 
 .arrow-up {
   position: absolute;
   left: -5rem;
   bottom: 2.5rem;
+  border-radius: 50%;
+  padding: 0.5rem; /* Adicionei um preenchimento para tornar o elemento clicável */
+  cursor: pointer;
+  filter: invert(100%);
+  transition: filter 0.5s ease, transform 0.5s ease;
 }
 
 .arrow-up:hover {
-  transform: translateY(-1.5px);
+  background-color: white;
+  filter: invert(0%) !important;
+  transform: rotate(360deg) translateY(-1.5px);  
 }
 
 .details-container {
@@ -401,8 +417,12 @@ article {
 
 article .icon {
   cursor: default;
+  filter: grayscale(0%);
 }
 
+article .icon:hover {
+  filter: grayscale(100%);
+}
 /* PROJECTS SECTION */
 
 #projects {
@@ -589,9 +609,8 @@ footer p {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform:  rotate(90deg); /* Ajuste para apontar para baixo */
-  text-align: center;
-  font-size: 6rem; /* Aumente o tamanho da fonte para torná-lo maior */
+  transform:  rotate(90deg); 
+  font-size: 7rem; 
   color: #000000;
   cursor: pointer;
   color: #06368f;
@@ -608,6 +627,12 @@ footer p {
     transform: translateY(-20%) rotate(90deg);
   }
 }
+
+.arrow-container:hover {
+  color: #fd264f;
+}
+
+
 
 
 .tabs {
