@@ -490,11 +490,12 @@ article .icon:hover {
   cursor: pointer;
   height: 2.5rem;
   padding: 2px;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Adicionei transições para transform e filter */
 }
 
 .git-icon:hover {
-  transform: translateY(-1.5px);
-}
+  transform: scale(1.15); /* Aumenta o tamanho em 10% */
+  filter: invert(50%) sepia(1000%) saturate(10000%)  !important; /* Ajuste o hue-rotate e remova o invert */}
 
 .email-icon {
   height: 2.5rem;
