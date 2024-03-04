@@ -172,11 +172,9 @@ section {
 
 .section_initial-container {
   display: none;
+  overflow-x: hidden;
 }
 
-.section_initial-container2 {
-  display: none;
-}
 
 @media only screen and (min-width: 1024px){
   .section_initial-container {
