@@ -170,7 +170,7 @@ section {
   height: 80vh;
 }
 
-.section_initial-container {
+/* .section_initial-container {
   display: none;
   overflow-x: hidden !important;
 }
@@ -191,7 +191,7 @@ section {
     z-index: -1;
   }
 
-}
+} */
 
 
 .section__pic-container {
