@@ -746,20 +746,21 @@ footer p {
   font-size: 18px;
 
 }
+@media only screen and (min-width: 1024px){
 
-.arrow-container {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform:  rotate(90deg); 
-  font-size: 7rem; 
-  color: #000000;
-  cursor: pointer;
-  color: #06368f;
-  text-decoration: none !important;
-  animation: moveUpDown 1s infinite alternate;
+  .arrow-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform:  rotate(90deg); 
+    font-size: 7rem; 
+    color: #000000;
+    cursor: pointer;
+    color: #06368f;
+    text-decoration: none !important;
+    animation: moveUpDown 1s infinite alternate;
+  }
 }
-
 @keyframes moveUpDown {
   0% {
     transform: translateY(0%) rotate(90deg);
