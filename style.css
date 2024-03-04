@@ -745,6 +745,11 @@ footer p {
   font-size: 18px;
 
 }
+
+.arrow-container{
+  display: none;
+}
+
 @media only screen and (min-width: 1024px){
 
   .arrow-container {
@@ -759,20 +764,21 @@ footer p {
     text-decoration: none !important;
     animation: moveUpDown 1s infinite alternate;
   }
-}
-@keyframes moveUpDown {
-  0% {
-    transform: translateY(0%) rotate(90deg);
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0%) rotate(90deg);
+    }
+  
+    100% {
+      transform: translateY(-20%) rotate(90deg);
+    }
   }
-
-  100% {
-    transform: translateY(-20%) rotate(90deg);
+  
+  .arrow-container:hover {
+    color: #fd264f;
   }
 }
 
-.arrow-container:hover {
-  color: #fd264f;
-}
 
 hr {
   border: none;
