@@ -178,7 +178,7 @@ section {
   display: none;
 }
 
-@media screen and (min-width: 1024px){
+@media only screen and (min-width: 1024px){
   .section_initial-container {
     position: absolute;
     top: 0;
@@ -192,20 +192,7 @@ section {
     background: linear-gradient(to right, #c5c5c5, #fffdfc);
     z-index: -1;
   }
-  .section_initial-container2 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: block;
-    height: 55rem;
-    width: 55rem;
-    margin: auto;
-    border-radius:  100% 0px 0px;
-    overflow: hidden !important;
-    background: linear-gradient(to left, #c5c5c5, #fffdfc);
-    z-index: -1;
-  }
-  
+
 }
 
 
