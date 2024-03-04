@@ -55,11 +55,8 @@
 }
 
 @media screen and (max-width: 600px) {
-  body {
-    overflow-x: hidden !important;
-  }
-
-  #contact,
+  
+   #contact,
   footer {
     height: 50vh;
   }
@@ -117,9 +114,8 @@
     text-align:justify;
   }
 
-  .arrow-container {
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-  }
+  .tabs {
+
+    overflow: hidden !important; }
+
 }
