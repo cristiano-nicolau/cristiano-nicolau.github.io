@@ -172,7 +172,7 @@ section {
 
 .section_initial-container {
   display: none;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 
