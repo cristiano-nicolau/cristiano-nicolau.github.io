@@ -9,7 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden ;
 }
 
 html {
@@ -746,11 +746,13 @@ footer p {
 
 }
 
-.arrow-container{
-  display: none;
+@media only screen and (max-width: 767px) {
+  .arrow-container {
+    display: none;
+  }
 }
 
-@media only screen and (min-width: 1024px){
+@media screen and (min-width: 768px){
 
   .arrow-container {
     position: absolute;

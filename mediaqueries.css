@@ -52,9 +52,16 @@
   bottom: 0;
   right: 50%;
   }
-}
+
 
 @media screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden !important;
+  }
+}
+  
+
+
   #contact,
   footer {
     height: 50vh;
