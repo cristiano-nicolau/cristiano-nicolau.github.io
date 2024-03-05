@@ -21,7 +21,7 @@
   }
   #experience,
   .experience-details-container {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
   }
   #profile,
   .section-container {
@@ -38,14 +38,14 @@
     margin: 0 5%;
   }
   .section__pic-container {
-    width: 275px;
-    height: 275px;
+    width: 250px;
+    height: 250px;
     margin: 0 auto 2rem;
     overflow: hidden;
     border-radius: 50%;
   }
   .about-containers {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
   .arrow-container {
   position: absolute;
@@ -70,7 +70,7 @@
   footer nav {
     height: fit-content;
     margin-bottom: 1rem;
-    margin-top: 5rem;
+    margin-top: 10rem;
   }
   .about-containers,
   .contact-info-upper-container,

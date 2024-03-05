@@ -151,7 +151,7 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
+  height: 100vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -181,8 +181,8 @@ section {
     top: 0;
     left: 0;
     display: block;
-    height: 55rem;
-    width: 55rem;
+    height: 80vh;
+    width: 80vh;
     margin: auto;
     border-radius: 0px 0px 100%;
     overflow: hidden;
@@ -312,9 +312,9 @@ section {
 }
 
 .about-containers {
-  gap: 2rem;
-  margin-bottom: 1.0rem;
-  margin-top: 2rem;
+  gap: 1rem;
+  margin-bottom: .5rem;
+  margin-top: 1rem;
 }
 
 
