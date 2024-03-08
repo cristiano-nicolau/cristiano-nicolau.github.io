@@ -52,6 +52,13 @@
   bottom: 0;
   right: 50%;
   }
+  .experience-details-container2 {
+    margin-top: 0.5rem;
+    height: fit-content !important;
+
+  }
+
+
 }
 
 @media screen and (max-width: 600px) {
