@@ -439,7 +439,6 @@ section {
   justify-content: center;
   flex-direction: column;
   padding: 0.1rem;
-  
 }
 .article-container {
   display: flex;
@@ -810,7 +809,6 @@ hr {
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   flex-wrap: wrap;
-
   overflow: visible; }
   .tabs [class^="tab"] label,
   .tabs [class*=" tab"] label {
