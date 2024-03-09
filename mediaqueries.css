@@ -53,11 +53,65 @@
   right: 50%;
   }
   .experience-details-container2 {
-    margin-top: 0.5rem;
+    margin-top: 0.1rem;
     height: fit-content !important;
 
-  }
 
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.0rem;
+  }
+  .logo {
+    font-size: 1.0rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: 46vw;
+    height: 46vw;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .projects-container {
+    text-align:justify;
+    font-size: 0.75rem;
+    margin: 0.5rem;
+  
+  }
+  .experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .experience-sub-title2 {
+    color: rgb(85, 85, 85);
+    font-weight: 400;
+    font-size: 1.0rem;
+    margin-bottom: 1rem;
+  }
+  .experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+  }
 
 }
 
@@ -116,6 +170,30 @@
   }
   .title {
     font-size: 2rem;
+  }
+  .projects-container {
+    text-align:justify;
+    font-size: 0.95rem;
+    margin: 0.5rem;
+  
+  }
+  .experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .experience-sub-title2 {
+    color: rgb(85, 85, 85);
+    font-weight: 400;
+    font-size: 1.0rem;
+    margin-bottom: 1rem;
+  }
+  .experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
   }
   .text-container {
     text-align:justify;
