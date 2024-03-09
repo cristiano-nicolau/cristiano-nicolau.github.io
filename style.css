@@ -41,7 +41,7 @@ nav {
 }
 
 .nav-links {
-  gap: 2rem;
+  gap: 2rem;  
   list-style: none;
   font-size: 1.5rem;
 }
@@ -257,7 +257,6 @@ section {
   display: flex;
   justify-content: center;
   gap: 1rem;
-
 }
 
 .btn {
@@ -639,8 +638,20 @@ article .icon:hover {
 
 .git-icon:hover {
   transform: scale(1.15); /* Aumenta o tamanho em 10% */
-  filter: invert(50%) sepia(1000%) saturate(10000%)  !important; /* Ajuste o hue-rotate e remova o invert */}
+  filter: invert(60%) sepia(100000%) saturate(100000%) hue-rotate(270deg) !important;
+}
 
+  .yt-icon {
+    cursor: pointer;
+    height: 2.5rem;
+    padding: 2px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Adicionei transições para transform e filter */
+  }
+  
+  .yt-icon:hover {
+    transform: scale(1.15); /* Aumenta o tamanho em 10% */
+    filter: invert(50%) sepia(1000%) saturate(10000%)  !important; /* Ajuste o hue-rotate e remova o invert */}
+  
 .email-icon {
   height: 2.5rem;
 }
@@ -656,7 +667,6 @@ footer {
 footer p {
   text-align: center;
 }
-
 
 
 /*  My Resume */
@@ -835,31 +845,53 @@ hr {
     .tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
     .tabs [class*=" tab"] [type="radio"]:hover,
     .tabs [class*=" tab"] [type="radio"]:focus {
-      border-bottom: 1px solid #06368f; }
+      border-bottom: 1.5px solid #06368f; }
     .tabs [class^="tab"] [type="radio"]:checked,
     .tabs [class*=" tab"] [type="radio"]:checked {
-      border-bottom: 1px solid #fd264f; }
+      border-bottom: 2px solid #fd264f; }
     .tabs [class^="tab"] [type="radio"]:checked + div,
     .tabs [class*=" tab"] [type="radio"]:checked + div {
-      opacity: 1; }
+      opacity: 2; }
     .tabs [class^="tab"] [type="radio"] + div,
     .tabs [class*=" tab"] [type="radio"] + div {
       display: block;
       opacity: 0;
-      padding: -0.5rem 0;
-      width: 90%;
+      padding: 0.5rem 0;
+      width: 100%;
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
       .tabs .tab-2 {
-        width: 50%; }
+        width: 33%; }
         .tabs .tab-2 [type="radio"] + div {
-          width: 200%;
+          width: 300%;
           margin-left: 200%; }
-        .tabs .tab-2 [type="radio"]:checked + div {
-          margin-left: 0; }
+        .tabs .tab-2:first-child [type="radio"]:checked + div {
+          margin-left: 0 !important; }
+          .tabs .tab-2 [type="radio"]:checked + div {
+            margin-left: -100% ; }
         .tabs .tab-2:last-child [type="radio"] + div {
-          margin-left: 100%; }
+          margin-left: 200%; }
         .tabs .tab-2:last-child [type="radio"]:checked + div {
-          margin-left: -100%; }
+          margin-left: -500% !important; }
+          .tabs .tab-3 {
+            width: 33.33%;
+          }
+          
+          .tabs .tab-3 [type="radio"] + div {
+            width: 300%;
+            margin-left: 200%;
+          }
+          
+          .tabs .tab-3 [type="radio"]:checked + div {
+            margin-left: -300%;
+          }
+          
+          .tabs .tab-3:last-child [type="radio"] + div {
+            margin-left: 200%;
+          }
+          
+          .tabs .tab-3:last-child [type="radio"]:checked + div {
+            margin-left: -200%;
+          } 
