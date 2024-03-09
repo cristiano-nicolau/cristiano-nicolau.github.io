@@ -304,11 +304,15 @@ section {
 
 #about {
   position: relative;
+  height: 100vh;
+
 }
 
 
 #skills {
   position: relative;
+  height: 100vh;
+
 }
 
 .about-containers {
@@ -379,7 +383,7 @@ section {
   border-color: rgb(163, 163, 163);
   text-align: center;
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
-  z-index: 99999;
+  z-index: 1;
 }
 
 .projects-container {
@@ -413,6 +417,8 @@ section {
 
 #experience {
   position: relative;
+  height: 100vh;
+
 }
 
 .experience-sub-title {
@@ -463,6 +469,8 @@ article .icon:hover {
 
 #projects {
   position: relative;
+  height: 100vh;
+
 }
 
 .color-container {
@@ -530,6 +538,7 @@ article .icon:hover {
   justify-content: center;
   flex-direction: column;
   padding: 0.1rem;
+  height: fit-content !important;
 }
 
 .article-container {
@@ -591,7 +600,7 @@ article .icon:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 95vh;
+  height: 90vh;
 }
 
 .contact-info-upper-container {
@@ -752,11 +761,7 @@ footer p {
 
 }
 
-@media only screen and (max-width: 767px) {
-  .arrow-container {
-    display: none;
-  }
-}
+
 
 @media screen and (min-width: 768px){
 
