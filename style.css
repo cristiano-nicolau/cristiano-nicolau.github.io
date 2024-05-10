@@ -193,16 +193,22 @@ section {
 
 
 .section__pic-container {
+  position: relative;
   display: flex;
-  height: 400px;
-  width: 400px;
   margin: auto 0;
   overflow: hidden;
   border-radius: 50%;
   transition: .3s linear;
   filter: grayscale(.2);
   border: 0.1rem solid #06368f;
+}
 
+.section__pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: .3s linear;
 }
 
 .section__pic-container:hover {
