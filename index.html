@@ -1,691 +1,481 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
   <title>Cristiano Nicolau</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="style.scss" />
-  <link rel="stylesheet" href="mediaqueries.css" />
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/unicons.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/tooplate-style.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+
 </head>
 
-<body>
-  <nav id="desktop-nav">
-    <div class="logo">Cristiano Nicolau</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-  <nav id="hamburger-nav">
-    <div class="logo">Cristiano Nicolau</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
-    </div>
-
-  </nav>
-  <section id="profile">
-    <div class="section_initial-container "></div>
-
-    <div class="section__pic-container">
-      <img src="./assets/profile-pic.jpg" alt="Cristiano Nicolau profile picture" />
-    </div>
-    <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">Cristiano Nicolau</h1>
-      <p class="section__text__p2"> Full Stack Developer</p>
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.location.href='./assets/CV-EN .pdf'">
-          Download CV
-        </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
-          Contact Info
-        </button>
-      </div>
-      <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-          onclick="location.href='https://www.linkedin.com/in/cristiano-nicolau-b79745269/'" />
-        <img src="./assets/github.png" alt="My Github profile" class="icon"
-          onclick="location.href='https://github.com/cristiano-nicolau/'" />
-      </div>
-    </div>
-    <a href="#about" class="arrow-container">></a>
-
-    </div>
-  </section>
-
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-
-    <div class="about-details-container">
-      <div class="text-container" style="text-align: center;">
-        <p><br>
-          Hello there. My name is Cristiano Nicolau lover of technology and programming.
-          I'm a
-          full-stack developer with experience in building web applications
-          using modern technologies. I'm a quick learner and I'm always
-          looking for new challenges. I'm currently studying Computer
-          Science Engineering at the University of Aveiro. I'm looking for
-          new opportunities to grow and improve my skills.
-        <p><br>
-          Experience working with a range of technologies, including HTML, CSS, JavaScript, ReactJS, NodeJS,
-          Python/Django, Java, Spring Boot, PostgreSQL/MySQL and MongoDB. I have a strong understanding of the software
-          development life cycle and agile methodologies.
-        </p>
-        <p><br>I am a quick learner and
-          always eager to learn new technologies and frameworks. I am a team player and I am always looking for new
-          challenges, which make me evolve both professionally and personally.
-        </p>
-      </div>
-      <div class="about-containers" style="margin-top: 5rem;">
-        <div class="details-container">
-          <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-          <h3>Interests</h3>
-          <p>Web Development, Software Development, Machine Learning, Data Science</p>
-        </div>
-        <div class="details-container">
-          <img src="./assets/education.png" alt="Education icon" class="icon" />
-          <h3>Education</h3>
-          <p>Computer Science Engineering BSc Degree <br> Sep 2021 - Present</p>
-        </div>
-      </div>
-
-    </div>
+<body class="dark-mode">
+  <div id="particles-js"></div>
+  <nav class="navbar navbar-expand-sm navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">&lt;Cristiano Nicolau /&gt;</a>
 
 
-      <img src="./assets/arrow_down.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
-    <img src="./assets/arrow_up.png" alt="Arrow icon" class="icon arrow
-      arrow-up" onclick="location.href=''" />
-  </section>
-  <section id="experience" class="resume">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Experience</h1>
-    <div class="about-containers" style="justify-content:space-between; align-content: center;  ">
-      <div class="col-lg-6">
-        <h3 class="resume-title">Education</h3>
-        <!-- <div class="resume-item">
-            <h4>Master of Fine Arts &amp; Graphic Design</h4>
-            <h5>2015 - 2016</h5>
-            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-            <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-          </div> -->
-        <div class="resume-item">
-          <h4>Bachelor of Computer Science Engineering</h4>
-          <h5>2021 - Present</h5>
-          <p><a href="https://www.ua.pt/"><strong>Universidade Aveiro</strong></a><em>, Aveiro</em></p>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        </div>
-        <div class="resume-item">
-          <h4>Scientific High School Degree</h4>
-          <h5>2018 - 2021</h5>
-          <p><a href="https://www.apjbrito.com/apjbrito/"><strong>Escola Pintor José de Brito</strong></a><em>, Viana do
-              Castelo</em></p>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <h3 class="resume-title">Professional Experience</h3>
-        <div class="resume-item">
-          <h4>Full Stack Developer</h4>
-          <h5>Jun 2023 - Set 2023</h5>
-          <p><a href="https://tectank.pt/"><strong>Tectank Lda</strong></a><em>, Viana do Castelo</em></p>
-          <p>
-            <br>
-          <ul>
-            <li>Collaborated developing a web aplication to the monitoring of municipal
-              and private swimming pools </li>
-            <li>Integrated front-end with API services, using ReactJS and NodeJS</li>
-            <li>Developed and improved API web services, using NodeJS and ExpressJS</li>
-            <li>Worked in database, using MySQL and MongoDB</li>
-            <li>Worked with Jira to manage the project</li>
-          </ul>
-          <p><strong>Tags: </strong> NodeJS, ReactJS, MySQL, MongoDB, Jira</p>
-          </p>
-        </div>
-        <div class="resume-item">
-          <h4>Collaborater at Associação de Nossa Sra da Silva</h4>
-          <h5>Jun 2023 - Actual</h5>
-          <p><strong></strong><em>Viana do Castelo</em></p>
-          <p>
-            <br>
-          <ul>
-          </p>
-        </div>
-      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto justify-content-center">
+          <li class="nav-item">
+            <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+          </li>
+        </ul>
 
-    </div>
-    <img src="./assets/arrow_down.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skills'" />
-    <img src="./assets/arrow_up.png" alt="Arrow icon" class="icon arrow arrow-up" onclick="location.href='./#about'" />
-  </section>
+        <ul class="navbar-nav ml-lg-auto">
 
-  <section id="skills">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Skills</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <h2 class="experience-sub-title"></h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/html.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>HTML/CSS</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-
-            <article>
-              <img src="./assets/React.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>ReactJS</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/javascript.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>JavaScript</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-
-            <article>
-              <img src="./assets/django.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Django</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <div class="details-container">
-          <h2 class="experience-sub-title"></h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/python.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Python</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/node.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>NodeJS</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/java.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Java</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/spring.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Spring Boot</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-
-
-          </div>
-        </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title"></h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/post.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>PostgreSQL </h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/PostGIS_logo.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>PostGis</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/mysql_official_logo_icon_169938.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>MySQL</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/mongo.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>MongoDB</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </div>
-      <div class="about-containers">
-        <div class="details-container">
-
-          <h2 class="experience-sub-title"></h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/flutter.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Flutter</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/docker.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Docker</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/linux.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Linux</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/git.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Git</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/jira.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Jira</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <img src="./assets/arrow_down.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
-    <img src="./assets/arrow_up.png" alt="Arrow icon" class="icon arrow
-        arrow-up" onclick="location.href='./#experience'" />
-
-
-  </section>
-  <section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
-
-
-    <div class="tabs">
-      <div class="tab-2">
-        <label for="tab2-1">Tab 1</label>
-        <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
-        <div>
-          <div class="experience-details-container2">
-            <div class="about-containers">
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">WisH - Where is Home </h2>
-                <p class="projects-container">
-                  WisH: Where is Home is an innovative and personalized real estate research platform, instead of
-                  focusing only on the physical characteristics of properties, it takes into account the individual
-                  preferences of buyers, allowing them to explore areas of interest based on metrics relevant additional
-                  information </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong> ReactJs, GeoServer, PostgreSQL, PostGis,
-                  GeoDjango</p>
-                <div class="btn-container">
-                  <a href="https://github.com/Wish-Where-is-Home">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-                  <a href="https://whereishome.netlify.app/">
-                    <img src="./assets/www.png" alt="GitHub icon" class="icon yt-icon" />
-                  </a>
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">e-commerce store vulnerabilities</h2>
-                <p class="projects-container">
-                  This project consists an e-commerce store about DETI, however the main objective was to present both
-                  vulnerable and secure application along with all the vulnerabilities encountered.
-                </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong> HTML, CSS, JavaScript, Python-Flask,
-                  SQLite</p>
-                <div class="btn-container">
-                  <a href="https://github.com/cristiano-nicolau/e-commerce_store_vulnerabilities">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">SensorSafe</h2>
-                <p class="projects-container">
-                  Enable users to proactively manage sensor data for fire detection, temperature control, and humidity
-                  monitoring, contributing to a safer living and working environment.
-                </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong> ReactJS, NodeJS, Spring Boot, RabbitMQ,
-                  Python</p>
-                <div class="btn-container">
-                  <a href="https://github.com/cristiano-nicolau/SensorSafe">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">Youtube Database</h2>
-                <p class="projects-container">
-                  Our final project is a database modeling for the YouTube platform. It allows users to upload, share,
-                  and view various types of content. Users can subscribe to other users, like and comment on content,
-                  create playlists, and also subscribe to the premium service.
-                </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong> MySQL, C#</p>
-                <div class="btn-container">
-                  <a href="https://github.com/cristiano-nicolau/BD/tree/main/Projeto_Final">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-
-                </div>
-              </div>
-
+          <div class="ml-lg-4">
+            <div class="color-mode d-lg-flex justify-content-center align-items-center">
+              <i class="color-mode-icon active"></i>
             </div>
-            <div class="about-containers">
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">instagram - ui</h2>
-                <p class="projects-container">
-                  This project consists of a clone of the Instagram interface, where the main objective was to develop a
-                  responsive interface using flutter.
-                </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong> Flutter</p>
-                <div class="btn-container">
-                  <a href="https://github.com/cristiano-nicolau/instagram_ui">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-                  <a href="https://youtube.com/shorts/dX3qtc-x6Ak">
-                    <img src="./assets/youtube.png" alt="GitHub icon" class="icon yt-icon" />
-                  </a>
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">Chat Server Distributed System</h2>
-                <p class="projects-container">
-                  This project consists of a chat server that allows multiple clients to connect and communicate with
-                  each
-                  other.
-                </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong>Python</p>
-
-                <div class="btn-container">
-                  <a href="https://github.com/cristiano-nicolau/chat_server-distributed_systems">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">DigDug - AI</h2>
-                <p class="projects-container">
-                  This project consists of an AI that plays the game DigDug. The main objective was to develop an AI
-                  that
-                  could play the game autonomously and achieve the highest score possible. (20k points)
-                </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong> Python </p>
-                <div class="btn-container">
-                  <a href="https://github.com/cristiano-nicolau/IA/tree/main/TPG-ia_107323_108536">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">CHORD algorithm Distributed System</h2>
-                <p class="projects-container">
-                  This project consists of a distributed system that implements the CHORD algorithm, which is a protocol
-                  and algorithm for a peer-to-peer distributed hash table.
-                </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong> Python</p>
-                <div class="btn-container">
-                  <a href="https://github.com/cristiano-nicolau/chord_algorithm-distributed_systems">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
           </div>
-        </div>
-      </div>
-      <div class="tab-2">
-        <label for="tab2-2">Tab 2</label>
-        <input id="tab2-2" name="tabs-two" type="radio">
-        <div>
-          <div class="experience-details-container2">
-            <div class="about-containers">
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">Syncall</h2>
-                <p class="projects-container">
-                  Syncal is a Web Aplication that gives users a calendar synchronizer where work groups, projects,
-                  friends can set dates to meet more easily. It also has the function of a personal agenda.
-                </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong>React Js, React Bootsrap</p>
-                <div class="btn-container">
-                  <a href="https://github.com/cristiano-nicolau/Syncal">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">Process reading and writing rates in bash</h2>
-                <p class="projects-container">
-                  This script allows you to view the amount of total memory and memory resident in physical memory, the
-                  total number of I/O bytes, and the read/write rate (bytes/sec) of the selected processes.
-                </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong> Bash </p>
-                <div class="btn-container">
-                  <a href="https://github.com/cristiano-nicolau/SO_Project1">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">Load Balancer Distributed System</h2>
-                <p class="projects-container">
-                  Very simples HTTP/TCP Load Balancer. Implemented in Python3, single thread, using OS selector. The
-                  code contains 4 classes that implement different strategies to select the next back-end server: N to
-                  1, Round Robin, Least Connections, and Least Response Time.
-                </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong> Python, Flask</p>
-                <div class="btn-container">
-                  <a href="https://github.com/cristiano-nicolau/load_balancer-distributed_systems">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">Web page about Formula 1</h2>
-                <p class="projects-container">
-                  This project consists of a web page about Formula 1, where the main objective was to develop a
-                  responsive interface using HTML, CSS, and JavaScript.
-                </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong> HTML, CSS, JavaScript</p>
-                <div class="btn-container">
-                  <a href="https://github.com/cristiano-nicolau/Trabalho_ITW">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-
-                </div>
-              </div>
-            </div>
-            <div class="about-containers">
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">To Do List</h2>
-                <p class="projects-container">
-                  This is a simple Todo List web application built using Flask and SQLAlchemy. Users can add tasks with
-                  optional tags, mark them as completed, and delete them. </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong> Flask, HTML, CSS, JavaScript, SQLite</p>
-                <div class="btn-container">
-                  <a href="https://github.com/cristiano-nicolau/To_do_List">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">myGames</h2>
-                <p class="projects-container">
-                  This project consists of a web page about games (pong, snake, tetris, ...), where the main objective
-                  was to develop a responsive interface using HTML, CSS, and JavaScript.
-                </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong> HTML, CSS, JavaScript</p>
-                <div class="btn-container">
-                  <a href="  https://github.com/cristiano-nicolau/myGames">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-                  <a href="https://cristiano-nicolau.github.io/myGames/">
-                    <img src="./assets/www.png" alt="GitHub icon" class="icon yt-icon" />
-                  </a>
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">Message Broker Distributed System</h2>
-                <p class="projects-container">
-                  This project consists of a message broker that allows multiple clients to connect and communicate with
-                  each other.
-                </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong> Python</p>
-                <div class="btn-container">
-                  <a href="https://github.com/cristiano-nicolau/message_broker-distributed_systems">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-
-                </div>
-              </div>
-              <div class="details-container color-container">
-                <h2 class="experience-sub-title2 project-title">Distributed Music Editor</h2>
-                <p class="projects-container">
-                  The project consists of a distributed music editing system, where a song with different sizes and it
-                  is possible to process and create other songs, gathering the instruments chosen by the user.
-                </p>
-                <hr>
-                <p class="projects-container"><strong>Technologies: </strong> Python</p>
-                <div class="btn-container">
-                  <a href="https://github.com/cristiano-nicolau/Distributed_Music_Editor">
-                    <img src="./assets/github.png" alt="GitHub icon" class="icon git-icon" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="tab-3">
-        <label for="tab2-3">Tab 3</label>
-        <input id="tab2-3" name="tabs-two" type="radio">
-        <div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
-          <p class="section__text__p2">No projects to show yet</p>
-        </div>
-
-      </div>
-    </div>
-    <img src="./assets/arrow_down.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
-    <img src="./assets/arrow_up.png" alt="Arrow icon" class="icon arrow arrow-up" onclick="location.href='./#skills'" />
-  </section>
-  <br>
-  <br>
-  <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p><a href="mailto:10cccristiano@gmail.com" class="mail">Email Me</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p><a href="https://www.linkedin.com/in/cristiano-nicolau-b79745269/" class="linkedin">LinkedIn</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/github.png" alt="github icon" class="icon contact-icon" />
-        <p><a href="https://www.github.com/cristiano-nicolau" class="github">GitHub</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/instagram.png" alt="instagram icon" class="icon contact-icon" />
-        <p><a href="https://www.instagram.com/cristiano_nicolau/" class="instagram">Instagram</a></p>
-      </div>
-    </div>
-    <div class="contact-info-container">
-    </div>
-    <p class="section__text__p1">Or Download My CV</p>
-    <h1 class="title">My Cvs</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/download.png" alt="download icon" class="icon contact-icon email-icon" />
-        <p><a href="./assets/CV-PT.pdf" download>Download <strong>(PT)</strong></a></p>
-      </div>
-      <div class="contact-info-container"></div>
-      <div class="contact-info-container"></div>
-
-      <div class="contact-info-container">
-        <img src="./assets/download.png" alt="download icon" class="icon contact-icon email-icon" />
-        <p><a href="./assets/CV-EN .pdf" download>Download <strong>(EN)</strong></a></p>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
         </ul>
       </div>
-    </nav>
-    <p>Copyright &#169; 2024 <strong>Cristiano Nicolau</strong>. All Rights Reserved.</p>
+    </div>
+  </nav>
+  <section class="home full-screen d-flex justify-content-center align-items-center text-left" id="home">
+    
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-7 col-md-12 col-12">
+          <div class="about-text">
+            <p>Welcome to <span class="mobile-block">my portfolio website!</span></p>
+            <h1 class="animated animated-text">
+              <span class="mr-2">Hello, I'm</span>
+              <div class="animated-info  text-left">
+                <span class="animated-item">Cristiano Nicolau</span>
+                <span class="animated-item">Backend Developer</span>
+                <span class="animated-item">Full Stack Developer</span>
+                <span class="animated-item">Data Engineer</span>
+
+              </div>
+            </h1>
+
+            <p></p>
+
+            <div class="custom-btn-group mt-4">
+              <a href="#" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Download Resume</a>
+              <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Contact Info</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div >
+        <a href="#about" class="mouse-wrap smoothscroll">
+          <span class="mouse">
+            <span class="scroll"></span>
+          </span>
+          <span class="mouse-label">Scroll</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+
+  <!-- ABOUT -->
+  <section class="about py-5 full-screen" id="about">
+    <div class="container">
+      <div class="row text-center justify-content-center align-items-center">
+        <h2>About Me</h2>
+      </div>
+      <div class="row py-5">
+        <div class="col-md-4">
+          <ul class="info">
+            <li><span class="first-block"></span><span class="second-block"></span></li>
+            <li><span class="first-block">Full Name:</span><span class="second-block">Cristiano Nicolau</span></li>
+            <li><span class="first-block">Age:</span><span class="second-block">21 Years</span></li>
+            <li><span class="first-block">Email:</span><span class="second-block">10cccristiano@gmail.com</span></li>
+            <li><span class="first-block">Address:</span><span class="second-block">Viana do Castelo, Portugal</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-8">
+          <h3>Hello There!</h3>
+          <p>My name is Cristiano Nicolau lover of technology and programming. I'm a full-stack developer with
+            experience in building web applications using modern technologies.</p>
+          <p> I'm currently studying Data Science at the University of Aveiro. I'm looking for new opportunities to grow
+            and improve my skills.</p>
+          <p> Experience working with a range of technologies, including HTML, CSS, JavaScript, ReactJS, NodeJS,
+            Python/Django, Java, Spring Boot, PostgreSQL/MySQL and MongoDB. I have a strong understanding of the
+            software development life cycle and agile methodologies. </p>
+          <p> I am a quick learner and always eager to learn new technologies and frameworks. I am a team player and I
+            am always looking for new challenges, which make me evolve both professionally and personally. </p>
+        </div>
+      </div>
+      <div>
+        <p>
+        <ul class="fh5co-social-icons">
+          <li><a href="#"><i class="icon-instagram-with-circle"></i></a></li>
+          <li><a href="#"><i class="icon-facebook-with-circle"></i></a></li>
+          <li><a href="#"><i class="icon-linkedin-with-circle"></i></a></li>
+          <li><a href="#"><i class="icon-github-with-circle"></i></a></li>
+        </ul>
+        </p>
+      </div>
+      <div class="container-scroller py-5">
+        <div class="container2">
+          <div class="scroller">
+            <p class="item">HTML</p>
+            <p class="item">CSS</p>
+            <p class="item">JavaScript</p>
+            <p class="item">ReactJS</p>
+            <p class="item">NodeJS</p>
+            <p class="item">Python</p>
+            <p class="item">Django</p>
+            <p class="item">Flask</p>
+            <p class="item">Java</p>
+            <p class="item">Spring Boot</p>
+            <p class="item">PostgreSQL</p>
+            <p class="item">MySQL</p>
+            <p class="item">MongoDB</p>
+            <p class="item">Redis</p>
+            <p class="item">Linux</p>
+            <p class="item">Git</p>
+            <p class="item">Docker</p>
+            <p class="item">Jira</p>
+          </div>
+          <div class="scroller">
+            <p class="item">HTML</p>
+            <p class="item">CSS</p>
+            <p class="item">JavaScript</p>
+            <p class="item">ReactJS</p>
+            <p class="item">NodeJS</p>
+            <p class="item">Python</p>
+            <p class="item">Django</p>
+            <p class="item">Flask</p>
+            <p class="item">Java</p>
+            <p class="item">Spring Boot</p>
+            <p class="item">PostgreSQL</p>
+            <p class="item">MySQL</p>
+            <p class="item">MongoDB</p>
+            <p class="item">Redis</p>
+            <p class="item">Linux</p>
+            <p class="item">Git</p>
+            <p class="item">Docker</p>
+            <p class="item">Jira</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- PROJECTS -->
+<section class="project py-5" id="project">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-11 text-center mx-auto col-12">
+              <div class="col-lg-8 mx-auto">
+                  <h2>Projects I've worked on</h2>
+              </div>
+              <div class="owl-carousel owl-theme">
+                  <!-- Projetos -->
+                  <div class="item">
+                      <div class="project-info">
+                          <div class="text-card">
+                              <h3>Project Title 1</h3>
+                              <p>Description of project 1. It includes various features and highlights the key aspects.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="project-info">
+                          <div class="text-card">
+                              <h3>Project Title 2</h3>
+                              <p>Description of project 2. It includes various features and highlights the key aspects.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="project-info">
+                          <div class="text-card">
+                              <h3>Project Title 3</h3>
+                              <p>Description of project 3. It includes various features and highlights the key aspects.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="project-info">
+                          <div class="text-card">
+                              <h3>Project Title 4</h3>
+                              <p>Description of project 4. It includes various features and highlights the key aspects.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="project-info">
+                          <div class="text-card">
+                              <h3>Project Title 5</h3>
+                              <p>Description of project 5. It includes various features and highlights the key aspects.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="project-info">
+                          <div class="text-card">
+                              <h3>Project Title 6</h3>
+                              <p>Description of project 6. It includes various features and highlights the key aspects.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                    <div class="project-info">
+                        <div class="text-card">
+                            <h3>Project Title 1</h3>
+                            <p>Description of project 1. It includes various features and highlights the key aspects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="project-info">
+                        <div class="text-card">
+                            <h3>Project Title 2</h3>
+                            <p>Description of project 2. It includes various features and highlights the key aspects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="project-info">
+                        <div class="text-card">
+                            <h3>Project Title 3</h3>
+                            <p>Description of project 3. It includes various features and highlights the key aspects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="project-info">
+                        <div class="text-card">
+                            <h3>Project Title 4</h3>
+                            <p>Description of project 4. It includes various features and highlights the key aspects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="project-info">
+                        <div class="text-card">
+                            <h3>Project Title 5</h3>
+                            <p>Description of project 5. It includes various features and highlights the key aspects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="project-info">
+                        <div class="text-card">
+                            <h3>Project Title 6</h3>
+                            <p>Description of project 6. It includes various features and highlights the key aspects.</p>
+                        </div>
+                    </div>
+                </div>
+                  <!-- Adicione mais itens conforme necessário -->
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+  <!-- FEATURES -->
+  <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+    <div class="container">
+      <div class="row text-center justify-content-center align-items-center">
+          <h2>My Resume</h2>
+        
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-md-offset-0">
+          <ul class="timeline">
+            <li class="timeline-heading text-center">
+              <div>
+                <h3>Work Experience</h3>
+              </div>
+            </li>
+            <li class="timeline-inverted animate-box">
+              <div class="timeline-badge"><i class="icon-suitcase"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">Junior Developer</h3>
+                  <span class="company">Company Name - 2013 - 2015</span>
+                </div>
+                <div class="timeline-body">
+                  <p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the
+                    Semantics, a large language ocean.</p>
+                </div>
+              </div>
+            </li>
+            <li class="animate-box timeline-unverted">
+              <div class="timeline-badge"><i class="icon-suitcase"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">UI/UX Designer</h3>
+                  <span class="company">Company Name - 2010 - 2012</span>
+                </div>
+                <div class="timeline-body">
+                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                    the blind texts.</p>
+                </div>
+              </div>
+            </li>
+
+            <br>
+            <li class="timeline-heading text-center animate-box">
+              <div>
+                <h3>Education</h3>
+              </div>
+            </li>
+            <li class="timeline-inverted animate-box">
+              <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">Data Science MSc Degree</h3>
+                  <span class="company"><strong>Universidade de Aveiro - </strong> 2024 - Present</span>
+                </div>
+                <div class="timeline-body">
+                  <p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the
+                    Semantics, a large language ocean.</p>
+                </div>
+              </div>
+            </li>
+            <li class="animate-box timeline-unverted">
+              <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">Computer Science Engineering BSc Degree</h3>
+                  <span class="company"><strong>Universidade de Aveiro - </strong> 2021 - 2024</span>
+                </div>
+                <div class="timeline-body">
+                  <p> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                    the blind texts.</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted animate-box">
+              <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">Scientific High School Degree</h3>
+                  <span class="company"><strong>Escola Pintor Jose de Brito - </strong>2018 - 2021</span>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact py-5" id="contact">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-5 mr-lg-5 col-12">
+          <div class="google-map w-100">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12088.558402180099!2d-73.99373482142036!3d40.75895421922642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855b8fb3083%3A0xa0f9aef176042a5c!2sTheater+District%2C+New+York%2C+NY%2C+USA!5e0!3m2!1sen!2smm!4v1549875377188"
+              width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+
+          <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+            <div class="contact-info-item">
+              <h3 class="mb-3 text-white">Say hello</h3>
+              <p class="footer-text mb-0">010 020 0960</p>
+              <p><a href="mailto:hello@company.co">hello@company.co</a></p>
+            </div>
+
+            <ul class="social-links">
+              <li><a href="#" class="uil uil-dribbble" data-toggle="tooltip" data-placement="left" title="Dribbble"></a>
+              </li>
+              <li><a href="#" class="uil uil-instagram" data-toggle="tooltip" data-placement="left"
+                  title="Instagram"></a></li>
+              <li><a href="#" class="uil uil-youtube" data-toggle="tooltip" data-placement="left" title="Youtube"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-12">
+          <div class="contact-form">
+            <h2 class="mb-4">Interested to work together? Let's talk</h2>
+
+            <form action="" method="get">
+              <div class="row">
+                <div class="col-lg-6 col-12">
+                  <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                </div>
+
+                <div class="col-lg-6 col-12">
+                  <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                </div>
+
+                <div class="col-12">
+                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                </div>
+
+                <div class="ml-lg-auto col-lg-5 col-12">
+                  <input type="submit" class="form-control submit-btn" value="Send Button">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-12 col-12">
+          <p class="copyright-text text-center">Copyright &copy; 2024 Cristiano Nicolau . All rights reserved</p>
+        </div>
+
+      </div>
+    </div>
   </footer>
-  <script src="script.js"></script>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/Headroom.js"></script>
+  <script src="js/jQuery.headroom.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 </body>
 
 </html>
