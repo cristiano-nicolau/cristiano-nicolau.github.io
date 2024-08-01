@@ -134,38 +134,13 @@
   $(".navbar").headroom();
 
 
-  $(function(){
-    $(".owl-carousel").owlCarousel({
-        items: 3, // Exibir 1 "slide" por vez
-        loop: true,
-        margin: 10,
-        nav: true,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: true,
-        responsive: {
-            0: {
-                items: 1, // Exibir 1 item por vez em dispositivos móveis
-                margin: 5
-            },
-            768: {
-                items: 2 // Exibir 1 item por vez em tablets
-            },
-            992: {
-                items: 3 // Exibir 1 item por vez em desktops
-            }
-        }
-    });
-});
-
 
   // SMOOTHSCROLL
   $(function() {
     $('.nav-link, .custom-btn-link').on('click', function(event) {
       var $anchor = $(this);
       $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top - 49
+        scrollTop: $($anchor.attr('href')).offset().top 
       }, 1000);
       event.preventDefault();
     });
