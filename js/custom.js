@@ -235,6 +235,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const aboutSection = document.getElementById('about');
     if (window.innerWidth <= 768) { // Define the breakpoint for mobile devices
       aboutSection.classList.remove('full-screen');
+      const container = aboutSection.querySelector('.container');
+      container.style.paddingTop = '1rem';
     }
   }
 

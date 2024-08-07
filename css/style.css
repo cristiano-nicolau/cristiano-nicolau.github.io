@@ -230,7 +230,7 @@ b, strong {
 }
 
 .navbar-light .navbar-toggler-icon {
-  background: none;
+  background: #ffffff !important;
 }
 
 .navbar-toggler {
@@ -401,7 +401,8 @@ b, strong {
   }
 
   .navbar-collapse {
-    background: #ffffff;
+    background: none;
+    color: #ffffff !important;
     text-align: center;
     padding-bottom: 20px;
   }
