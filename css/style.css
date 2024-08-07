@@ -144,6 +144,7 @@ b, strong {
   animation-delay: 6s;
 }
 
+
 @keyframes BottomTotop {
   0% {
     opacity: 0;
@@ -408,13 +409,15 @@ b, strong {
   .navbar-expand-sm .navbar-nav .nav-link {
     padding: 3px 20px;
   }
+
+  .about-text {
+    padding: 0 15px;
+  }
 }
 @media (max-width: 580px) {
-	.animated-info {
-		min-width: 200px;
-	}
+
   .animated-item {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .custom-btn-group {
@@ -433,6 +436,11 @@ b, strong {
   .timeline-info small {
     display: block;
     margin: 10px 0 0 0;
+  }
+
+  .about-text {
+    padding: 0 2rem;
+    font-size: 10px;
   }
 }
 @media (max-width: 320px) {

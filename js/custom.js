@@ -229,3 +229,18 @@ document.addEventListener('DOMContentLoaded', () => {
     updateButton();
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  function checkScreenSize() {
+    const aboutSection = document.getElementById('about');
+    if (window.innerWidth <= 768) { // Define the breakpoint for mobile devices
+      aboutSection.classList.remove('full-screen');
+    }
+  }
+
+  // Check screen size on page load
+  checkScreenSize();
+
+  // Optional: Check screen size on window resize
+  window.addEventListener('resize', checkScreenSize);
+});
