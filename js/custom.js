@@ -10,7 +10,7 @@
     particlesJS("particles-js", {
       "particles": {
         "number": {
-          "value": 400,
+          "value": 100,
           "density": {
             "enable": true,
             "value_area": 800
@@ -174,3 +174,58 @@ goToTop();
 
 
 })(jQuery);
+
+window.addEventListener('load', function() {
+  setTimeout(function() {
+      document.getElementById('preloader').classList.add('hidden');
+      document.getElementById('loader').classList.add('hidden');
+  }, 500); // 3000 milissegundos = 3 segundos
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const loadMoreBtn = document.getElementById('customBtn');
+  const projectItems = document.querySelectorAll('.project-item');
+  let currentIndex = 4;
+  const itemsToShow = 4;
+
+  function updateButton() {
+    if (currentIndex >= projectItems.length) {
+      loadMoreBtn.textContent = 'Show Less';
+    } else {
+      loadMoreBtn.textContent = 'More Projects';
+    }
+  }
+
+  function showItems(start, end) {
+    for (let i = start; i < end && i < projectItems.length; i++) {
+      projectItems[i].classList.remove('hidden');
+    }
+  }
+
+  function hideItems(start, end) {
+    for (let i = start; i < end && i < projectItems.length; i++) {
+      projectItems[i].classList.add('hidden');
+    }
+  }
+
+  function goToTopProjects() {
+    const topProjects = document.getElementById('project');
+    topProjects.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  showItems(0, currentIndex);
+  updateButton();
+
+  loadMoreBtn.addEventListener('click', () => {
+    if (currentIndex < projectItems.length) {
+      showItems(currentIndex, currentIndex + itemsToShow);
+      currentIndex += itemsToShow;
+    } else {
+      hideItems(itemsToShow, projectItems.length);
+      currentIndex = itemsToShow;
+      goToTopProjects();
+    }
+    updateButton();
+  });
+});

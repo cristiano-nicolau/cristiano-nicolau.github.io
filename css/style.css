@@ -332,74 +332,38 @@ b, strong {
 
 #about {
   margin-top: -5dvh;
-  background: #f7f3f3;
+  background: #F7FBFC;
 }
 
+#resume {
+  background: #F6F6F6;
+}
+
+#project{
+  background: #F7FBFC;
+}
+
+#skills {
+  background: #F6F6F6;
+}
 .dark-mode #about {
   margin-top: -5dvh;
-  background: #111118;
+  background: #212121;
 }
 
-.google-map iframe {
-  width: 100%;
+.dark-mode #resume {
+  background: #45474B;
 }
 
-.contact-form {
-  position: relative;
-}
-.contact-form .form-control {
-  background: transparent;
-  border-radius: 2px;
-  outline: none;
-  box-shadow: none;
-  font-weight: bold;
-  margin: 16px 0;
-}
-.contact-form .form-control:not(textarea) {
-  height: 48px;
-}
-.contact-form .form-control:hover, .contact-form .form-control:focus {
-  border-color: #ffc200;
-}
-.contact-form .submit-btn {
-  background: #ffc200;
-  border-radius: 50px;
-  color: #ffffff;
-  font-weight: bold;
-  border: 0;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-.contact-form .submit-btn:hover {
-  background: #474559;
+.dark-mode #project{
+  background: #212121;
 }
 
-.contact-info {
-  background: #474559;
-  border-radius: 0 0 3px 3px;
-  position: relative;
-  bottom: 8px;
-}
-.contact-info p, .contact-info a {
-  color: #f7f3f3;
+.dark-mode #skills {
+  background: #45474B;
 }
 
-.social-links .uil {
-  color: #f7f3f3;
-  font-size: 20px;
-  display: block;
-  margin: 5px 0;
-}
-.social-links .uil:hover {
-  color: #ffc200;
-}
 
-@media (min-width: 1270px) {
-  .owl-theme .owl-dots {
-    position: relative;
-    bottom: 50px;
-  }
-}
 @media (max-width: 991px) {
   .full-screen {
     padding-bottom: 4rem;
@@ -1066,62 +1030,6 @@ b, strong {
     -webkit-transform: translateY(20px);
     transform: translateY(20px); } }
 
-
-
-
-    .dark-mode .owl-carousel .owl-nav button.owl-next,
-.dark-mode .owl-carousel .owl-nav button.owl-prev,
-.dark-mode .owl-carousel button.owl-dot {
-  color: #ffffff;
-}
-
-
-.owl-carousel .owl-nav span {
-  display: none;
-}
-.owl-carousel .owl-nav .owl-prev:before,
-.owl-carousel .owl-nav .owl-next:before {
-  background: none;
-  padding: 0;
-  display: block;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  font-family: 'unicons';
-  font-size: 100px;
-  line-height: normal;
-}
-.owl-carousel .owl-nav .owl-prev:before {
-  content: '\e833';
-  left: -45px;
-}
-.owl-carousel .owl-nav .owl-next:before {
-  content: '\e836';
-  right: -45px;
-}
-
-.owl-theme .owl-nav [class*=owl-] {
-  background: none;
-  border-radius: 0;
-  margin: 0;
-  padding: 0;
-  font-size: inherit;
-}
-.owl-theme .owl-nav [class*=owl-]:hover {
-  color: #ffc200;
-}
-.owl-theme .owl-dots .owl-dot {
-  outline: none;
-}
-.owl-theme .owl-dots .owl-dot span {
-  width: 8px;
-  height: 8px;
-}
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-  background: #5b5b5b;
-}
-
-
 #project .proj ol {
 	list-style: none;
 	counter-reset: list;
@@ -1140,6 +1048,15 @@ b, strong {
 	background-color: white;
 }
 
+#project .proj li:hover {
+  box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.dark-mode #project .proj li:hover {
+  box-shadow: 0.1rem 0.1rem 1.5rem rgb(255, 255, 255);
+}
+
 #project .proj li::before {
 	--stop: calc(100% / var(--length) * var(--i));
 	--l: 62%;
@@ -1156,17 +1073,43 @@ b, strong {
 	left: 0;
 	background: linear-gradient(to right, var(--c1) var(--stop), var(--c2) var(--stop));
 }
+.project-item h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.project-item h3 a {
+  margin-left: auto;
+  font-size: 5dvh
+}
+
+.dark-mode #project .proj h3 {
+  color: #484848;
+}
+
+#project .proj p {
+  text-align: justify;
+}
+
+.dark-mode #project .proj p {
+  color: #5b5b5b;
+}
+
+#project .proj span {
+  color: #5b5b5b;
+  margin-top: 0.5rem;
+}
 
 @media (min-width: 40em) {
 	#project .proj li {
-		margin: 3rem auto;
-		padding: 3rem 2rem 2rem;
+		margin: 2rem auto;
+		padding: 2rem 2rem 2rem;
 	}
 	
 	#project .proj  h3 {
 		font-size: 2.25rem;
-		margin: 0 0 2rem;
+		margin: 0 0 1rem;
 	}
 	
 	#project .proj  h3::before {
@@ -1216,3 +1159,79 @@ b, strong {
   text-decoration: none;
   outline: none;
 }
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#preloader.hidden {
+  display: none;
+}
+
+/* Estilo para o loader */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side, #ffa516 94%, #0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%, #ffa516);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: l13 1s infinite linear;
+}
+
+@keyframes l13 { 
+  100% { transform: rotate(1turn); }
+}
+
+
+
+                        
+
+#project .btn {
+    cursor: pointer; border: solid rgb(0, 0, 0); font-family: "system-ui"; font-size: 14px; color: rgb(255, 255, 255); padding: 10px 30px; transition: 806ms; width: 200px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; border-radius: 8px; background: rgb(0, 0, 0); --hover-bgc: #ffffff; --hover-color: #000000; --hover-borderc: #ffc200; --hover-width: 225px;
+}
+
+.dark-mode #project .btn {
+    border: solid #212121;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+#project .btn:hover{
+    
+color: rgb(0, 0, 0);
+width: 225px;
+background: rgb(255, 255, 255);
+border-color: rgb(255, 194, 0);
+border-width: 2px;
+border-style: solid;
+scale: 1.05;
+}
+
+.dark-mode #project .btn:hover{
+    color: rgb(255, 255, 255);
+    background: #212121;
+    border-color: rgb(255, 194, 0);
+    border-width: 2px;
+    border-style: solid;
+    scale: 1.05;
+}
+
+#project .hidden {
+  display: none;
+}
+
+
+
+
