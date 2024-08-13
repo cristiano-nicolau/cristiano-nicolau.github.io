@@ -140,7 +140,7 @@
     $('.nav-link, .custom-btn-link').on('click', function(event) {
       var $anchor = $(this);
       $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top - 50px
+        scrollTop: $($anchor.attr('href')).offset().top
       }, 1000);
       event.preventDefault();
     });
