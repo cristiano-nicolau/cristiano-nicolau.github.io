@@ -4,6 +4,7 @@
 body {
   font-family: "Maven Pro", sans-serif;
   padding-top: 70px;
+  overflow-x: hidden !important;
 }
 
 
