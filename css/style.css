@@ -10,13 +10,7 @@ body {
   height: 100dvh;
 }
 
-.navcor {
-  color: #ff9000;
-}
 
-.navcor:hover {
-  color: #fff !important;
-}
 
 .small-text {
   color: #5b5b5b;
@@ -157,7 +151,13 @@ strong {
 .animated-item:nth-child(4n + 4) {
   animation-delay: 6s;
 }
+.navcor {
+  color: #ff9000;
+}
 
+.navcor:hover {
+  color: #fff !important;
+}
 @keyframes BottomTotop {
   0% {
     opacity: 0;
@@ -775,6 +775,16 @@ strong {
   margin-top: 0;
 }
 
+.lang_skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #222121c4;
+  justify-content: center; /* Alinha os itens ao centro */
+}
 .company {
   display: flex;
   flex-wrap: wrap; /* Isso permite que os botões que não cabem na tela quebrem para a linha seguinte */
@@ -1235,9 +1245,6 @@ strong {
   border: none;
   font-weight: bold;
   background: #6e6d70;
-  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1),
-    inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5),
-    0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
   color: #dfdedf;
   user-select: none !important;
   -webkit-user-select: none !important;
@@ -1353,11 +1360,11 @@ strong {
 }
 
 .services .service-item .icon {
-  color: #000000;
+  color: #fff;
   background: #ffa516;
   margin: 0;
-  width: 64px;
-  height: 64px;
+  width: 35px;
+  height: 35px;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -1366,6 +1373,12 @@ strong {
   font-size: 28px;
   transition: ease-in-out 0.3s;
 }
+.icon{
+  width: 50px !important;
+  height: 50px !important;
+}
+
+
 
 .services .service-item h3 {
   font-weight: 700;
@@ -1394,3 +1407,18 @@ strong {
     color: #ffa516;
   }
 }
+
+
+/* Estado inicial: invisível e deslocado */
+.service-item {
+  opacity: 0;
+  transform: translateY(90px); /* Deslocado para baixo */
+  transition: opacity 0.9s ease, transform 0.9s ease; /* Suavidade da animação */
+}
+
+/* Estado visível: posição original e totalmente opaco */
+.service-item.animate-visible {
+  opacity: 1;
+  transform: translateY(0); /* Posição original */
+}
+

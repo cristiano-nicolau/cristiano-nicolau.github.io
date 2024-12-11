@@ -317,3 +317,34 @@ const first_page = new IntersectionObserver(
 
 // Observar cada elemento
 animatedElements.forEach((el) => first_page.observe(el));
+
+
+// Seleciona todos os elementos com a classe "service-item"
+const serviceItems = document.querySelectorAll(".service-item");
+
+// Configura o IntersectionObserver
+const service_observer = new IntersectionObserver(
+  (entries, service_observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+        const delay = element.getAttribute("data-aos-delay"); // Obtém o atraso configurado
+
+        // Aplica a animação com o atraso
+        setTimeout(() => {
+          element.classList.add("animate-visible");
+        }, delay);
+
+        service_observer.unobserve(element); // Para de observar após animar
+      }
+    });
+  },
+  {
+    threshold: 0.1, // Percentual do elemento visível necessário para ativar
+  }
+);
+
+// Observa cada elemento
+serviceItems.forEach((item) => service_observer.observe(item));
+
+
