@@ -1072,6 +1072,9 @@ strong {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 .dark-mode .gototop a {
   background: rgba(255, 255, 255, 0.8);
@@ -1087,6 +1090,8 @@ strong {
 .gototop a:focus {
   text-decoration: none;
   outline: none;
+  background: #ff9000;
+  color: #fff;
 }
 
 #preloader {
@@ -1307,3 +1312,85 @@ strong {
   transform: translateX(0);
 }
 
+.about-text p {
+  opacity: 0;
+  transform: translateY(50px); /* Deslocamento vertical inicial */
+  transition: all 1s ease-in-out;
+}
+
+/* Quando em visão */
+.about-text p.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilos iniciais: fora da visão */
+.container .about-text, 
+.container .header_social{
+  opacity: 0;
+  transform: translateY(100px); /* Deslocamento para baixo */
+  transition: all 0.8s ease-out; /* Suavidade da animação */
+}
+
+/* Quando em visão */
+.container .about-text.animate-visible, 
+.container .header_social.animate-visible{
+  opacity: 1;
+  transform: translateY(0); /* Elemento na posição original */
+}
+
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services .service-item {
+  background-color: #fff;
+  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  padding: 60px 30px;
+  transition: all ease-in-out 0.3s;
+  border-radius: 18px;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.services .service-item .icon {
+  color: #000000;
+  background: #ffa516;
+  margin: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+}
+
+.services .service-item h3 {
+  font-weight: 700;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+  transition: ease-in-out 0.3s;
+  color: #000;
+
+}
+
+.services .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #000;
+
+}
+
+@media (min-width: 1365px) {
+  .services .service-item:hover {
+    transform: translateY(-10px);
+    border-color: #ffa516;
+  }
+
+  .services .service-item:hover h3 {
+    color: #ffa516;
+  }
+}

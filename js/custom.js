@@ -272,3 +272,48 @@ const observer = new IntersectionObserver(
 
 // Observa cada item da timeline
 timelineItems.forEach((item) => observer.observe(item));
+
+
+// Seleciona todos os parágrafos dentro da seção "About Me"
+const aboutParagraphs = document.querySelectorAll(".about-text p");
+
+// Configura o IntersectionObserver
+const aboutObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-visible"); // Adiciona a classe para ativar a animação
+      }
+    });
+  },
+  {
+    threshold: 0.2, // Define quanto do elemento precisa estar visível para ativar
+  }
+);
+
+// Observa cada parágrafo
+aboutParagraphs.forEach((p) => aboutObserver.observe(p));
+
+
+// Selecionar os elementos para animar
+const animatedElements = document.querySelectorAll(
+  ".about-text, .header_social, .mouse-wrap"
+);
+
+// Configurar o IntersectionObserver
+const first_page = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-visible"); // Adiciona classe para animar
+        first_page.unobserve(entry.target); // Para de observar após animar
+      }
+    });
+  },
+  {
+    threshold: 0.1, // Percentual do elemento visível necessário para ativar
+  }
+);
+
+// Observar cada elemento
+animatedElements.forEach((el) => first_page.observe(el));
