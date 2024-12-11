@@ -253,21 +253,22 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', checkScreenSize);
 });
 
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    // Se o elemento estiver visível na viewport
-    if (entry.isIntersecting) {
-      // Adiciona a classe 'animate-box' que aplica a animação
-      entry.target.classList.add('animate-box');
-      // Para observar o elemento apenas uma vez
-      observer.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.5 // A animação será disparada quando 50% do elemento estiver visível
-});
+// Seleciona todos os elementos com as classes de animação
+const timelineItems = document.querySelectorAll(".timeline-inverted, .timeline-unverted");
 
-// Seleciona todos os itens da timeline e começa a observá-los
-document.querySelectorAll('.timeline-inverted, .timeline-unverted').forEach(item => {
-  observer.observe(item);
-});
+// Configura o IntersectionObserver
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-visible"); // Adiciona a classe para ativar a animação
+      }
+    });
+  },
+  {
+    threshold: 0.2, // Define quanto do elemento precisa estar visível para ativar
+  }
+);
+
+// Observa cada item da timeline
+timelineItems.forEach((item) => observer.observe(item));

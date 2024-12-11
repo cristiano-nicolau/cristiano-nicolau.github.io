@@ -797,6 +797,10 @@ strong {
   color: #222121c4;
   direction: rtl; /* Altera a direção do fluxo para da direita para a esquerda */
 }
+
+.dark-mode .company-unverted {
+  color: #bfbfbf;
+}
 .timeline-body > p,
 .timeline-body > ul {
   margin-bottom: 0;
@@ -1284,40 +1288,22 @@ strong {
   color: #ff9000;
 }
 
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Animação quando o elemento entra da direita */
-@keyframes slideInRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Classe base para os itens na linha do tempo */
-.animate-box {
+/* Inicialização fora de visão */
+.timeline-inverted,
+.timeline-unverted {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transform: translateX(-50px); /* Entrada da esquerda por padrão */
+  transition: all 0.8s ease-in-out;
 }
 
-/* Aplicando as animações de acordo com a posição na timeline */
-.timeline-inverted.animate-box {
-  animation: slideInRight 0.7s forwards; /* Animação da direita para a esquerda */
+.timeline-unverted {
+  transform: translateX(50px); /* Entrada da direita */
 }
 
-.timeline-unverted.animate-box {
-  animation: slideInLeft 0.7s forwards; /* Animação da esquerda para a direita */
+/* Quando em visão */
+.timeline-inverted.animate-visible,
+.timeline-unverted.animate-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
+
