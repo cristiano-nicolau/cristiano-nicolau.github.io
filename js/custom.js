@@ -133,8 +133,14 @@
   // HEADER
   $(".navbar").headroom();
 
-
-
+  // SMOOTH SCROLL FOR MOUSE WRAP
+  $('.mouse-wrap').on('click', function(event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+      scrollTop: $($anchor.attr('href')).offset().top
+    }, 1000);
+    event.preventDefault();
+  });
   // SMOOTHSCROLL
   $(function() {
     $('.nav-link, .custom-btn-link').on('click', function(event) {
@@ -154,7 +160,7 @@
         event.preventDefault(); 
         $('html, body').animate({
             scrollTop: 0
-        }, 500, 'swing', function() {
+        }, 1000, 'swing', function() {
         });
 
         return false; 
@@ -245,4 +251,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Optional: Check screen size on window resize
   window.addEventListener('resize', checkScreenSize);
+});
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    // Se o elemento estiver visível na viewport
+    if (entry.isIntersecting) {
+      // Adiciona a classe 'animate-box' que aplica a animação
+      entry.target.classList.add('animate-box');
+      // Para observar o elemento apenas uma vez
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.5 // A animação será disparada quando 50% do elemento estiver visível
+});
+
+// Seleciona todos os itens da timeline e começa a observá-los
+document.querySelectorAll('.timeline-inverted, .timeline-unverted').forEach(item => {
+  observer.observe(item);
 });
