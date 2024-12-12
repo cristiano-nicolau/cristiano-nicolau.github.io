@@ -353,40 +353,117 @@ strong {
 .dark-mode p .dark-mode .color-mode {
   color: #ffffff;
 }
-
 #about {
-  margin-top: -5dvh;
-  background: #f7fbfc;
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(176deg, rgba(255,255,255,1) 55%, rgba(229,229,229,1) 75%);
+  background: -webkit-linear-gradient(176deg, rgba(255,255,255,1) 55%, rgba(229,229,229,1) 75%);
+  background: linear-gradient(176deg, rgba(255,255,255,1) 55%, rgba(229,229,229,1) 75%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e5e5e5",GradientType=1); 
 }
 
 #resume {
-  background: #f6f6f6;
+  background: rgb(229,229,229);
+  background: -moz-linear-gradient(176deg, rgba(229,229,229,1) 15%, rgba(255,255,255,1) 50%);
+  background: -webkit-linear-gradient(176deg, rgba(229,229,229,1) 15%, rgba(255,255,255,1) 50%);
+  background: linear-gradient(176deg, rgba(229,229,229,1) 15%, rgba(255,255,255,1) 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5e5e5",endColorstr="#ffffff",GradientType=1); 
 }
 
-#project {
-  background: #f7fbfc;
+#education-section { 
+  background: rgb(229,229,229);
+  background: -moz-linear-gradient(176deg, rgba(255,255,255,1) 30%, rgba(229,229,229,1) 65%);
+  background: -webkit-linear-gradient(176deg, rgba(255,255,255,1) 30%, rgba(229,229,229,1) 65%);
+  background: linear-gradient(176deg, rgba(255,255,255,1) 30%, rgba(229,229,229,1) 65%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5e5e5",endColorstr="#ffffff",GradientType=1); 
+}
+
+#project-section{
+  background: rgb(229,229,229);
+  background: -moz-linear-gradient(176deg, rgba(229,229,229,1) 45%, rgba(255,255,255,1) 80%);
+  background: -webkit-linear-gradient(176deg, rgba(229,229,229,1) 45%, rgba(255,255,255,1) 80%);
+  background: linear-gradient(176deg, rgba(229,229,229,1) 45%, rgba(255,255,255,1) 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5e5e5",endColorstr="#ffffff",GradientType=1); 
 }
 
 #skills {
-  background: #f6f6f6;
+  background: rgb(229,229,229);
+  background: -moz-linear-gradient(176deg, rgba(255,255,255,1) 30%, rgba(229,229,229,1) 65%);
+  background: -webkit-linear-gradient(176deg, rgba(255,255,255,1) 30%, rgba(229,229,229,1) 65%);
+  background: linear-gradient(176deg, rgba(255,255,255,1) 30%, rgba(229,229,229,1) 65%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5e5e5",endColorstr="#ffffff",GradientType=1); 
 }
+#contact {
+  background: rgb(229,229,229);
+  background: -moz-linear-gradient(176deg, rgba(229,229,229,1) 25%, rgba(255,255,255,1) 50%);
+  background: -webkit-linear-gradient(176deg, rgba(229,229,229,1) 25%, rgba(255,255,255,1) 50%);
+  background: linear-gradient(176deg, rgba(229,229,229,1) 25%, rgba(255,255,255,1) 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5e5e5",endColorstr="#ffffff",GradientType=1); 
+}
+#footer {
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(176deg, rgba(255,255,255,1) 100%);
+  background: -webkit-linear-gradient(176deg, rgba(255,255,255,1) 100%);
+  background: linear-gradient(176deg, rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#131f3b",endColorstr="#000000",GradientType=1); 
+}
+
+
+
+
+
 .dark-mode #about {
-  margin-top: -5dvh;
-  background: #212121;
+  background: rgb(12,12,13);
+  background: -moz-linear-gradient(177deg, rgba(12,12,13,1) 10%, rgba(0,0,0,1) 32%, rgba(19,31,59,1) 80%);
+  background: -webkit-linear-gradient(177deg, rgba(12,12,13,1) 10%, rgba(0,0,0,1) 32%, rgba(19,31,59,1) 80%);
+  background: linear-gradient(177deg, rgba(12,12,13,1) 10%, rgba(0,0,0,1) 32%, rgba(19,31,59,1) 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0c0c0d",endColorstr="#131f3b",GradientType=1); 
 }
 
 .dark-mode #resume {
-  background: #45474b;
+  background: rgb(19,31,59);
+  background: -moz-linear-gradient(177deg, rgba(19,31,59,1) 12%, rgba(12,12,13,1) 30%, rgba(0,0,0,1) 80%);
+  background: -webkit-linear-gradient(177deg, rgba(19,31,59,1) 12%, rgba(12,12,13,1) 30%, rgba(0,0,0,1) 80%);
+  background: linear-gradient(177deg, rgba(19,31,59,1) 12%, rgba(12,12,13,1) 30%, rgba(0,0,0,1) 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#131f3b",endColorstr="#000000",GradientType=1); 
 }
 
-.dark-mode #project {
-  background: #212121;
+.dark-mode #education-section { 
+  background: rgb(0,0,0) !important;
+  background: -moz-linear-gradient(177deg, rgba(0,0,0,1) 10%, rgba(12,12,13,1) 30%, rgba(0,0,0,1) 49%)!important;
+  background: -webkit-linear-gradient(177deg, rgba(0,0,0,1) 10%, rgba(12,12,13,1) 30%, rgba(0,0,0,1) 49%)!important;
+  background: linear-gradient(177deg, rgba(0,0,0,1) 10%, rgba(12,12,13,1) 30%, rgba(0,0,0,1) 49%)!important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#131f3b",GradientType=1); 
+}
+
+.dark-mode #project-section{
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(176deg, rgba(0,0,0,1) 10%, rgba(12,12,13,1) 30%, rgba(19,31,59,1) 79%);
+  background: -webkit-linear-gradient(176deg, rgba(0,0,0,1) 10%, rgba(12,12,13,1) 30%, rgba(19,31,59,1) 79%);
+  background: linear-gradient(176deg, rgba(0,0,0,1) 10%, rgba(12,12,13,1) 30%, rgba(19,31,59,1) 79%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#131f3b",GradientType=1); 
 }
 
 .dark-mode #skills {
-  background: #45474b;
+  background: rgb(19,31,59);
+  background: -moz-linear-gradient(176deg, rgba(19,31,59,1) 19%, rgba(12,12,13,1) 30%, rgba(0,0,0,1) 90%);
+  background: -webkit-linear-gradient(176deg, rgba(19,31,59,1) 19%, rgba(12,12,13,1) 30%, rgba(0,0,0,1) 90%);
+  background: linear-gradient(176deg, rgba(19,31,59,1) 19%, rgba(12,12,13,1) 30%, rgba(0,0,0,1) 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#131f3b",endColorstr="#000000",GradientType=1); 
 }
-
+.dark-mode #contact {
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(circle, rgba(0,0,0,1) 25%, rgba(12,12,13,1) 30%, rgba(0,0,0,1) 75%);
+  background: -webkit-linear-gradient(circle, rgba(0,0,0,1) 25%, rgba(12,12,13,1) 30%, rgba(0,0,0,1) 75%);
+  background: linear-gradient(circle, rgba(0,0,0,1) 25%, rgba(12,12,13,1) 30%, rgba(0,0,0,1) 75%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#131f3b",endColorstr="#000000",GradientType=1); 
+}
+.dark-mode #footer {
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(176deg, rgba(0,0,0,1) 100%);
+  background: -webkit-linear-gradient(176deg, rgba(0,0,0,1) 100%);
+  background: linear-gradient(176deg, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#131f3b",endColorstr="#000000",GradientType=1); 
+}
 @media (max-width: 991px) {
   .full-screen {
     padding-bottom: 4rem;
@@ -1110,12 +1187,12 @@ strong {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #fff;
-  z-index: 9999;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   display: flex;
+  z-index: 999999 !important;
 }
 
 #preloader.hidden {
@@ -1140,7 +1217,8 @@ strong {
   }
 }
 
-#project .btn {
+#project-section .btn {
+  margin-top: 10px;
   cursor: pointer;
   border: solid rgb(0, 0, 0);
   font-family: "system-ui";
@@ -1159,32 +1237,31 @@ strong {
   --hover-width: 225px;
 }
 
-.dark-mode #project .btn {
+.dark-mode #project-section .btn {
   border: solid #212121;
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }
 
-#project .btn:hover {
+#project-section .btn:hover {
   color: rgb(0, 0, 0);
   width: 225px;
   background: rgb(255, 255, 255);
   border-color: rgb(255, 194, 0);
   border-width: 2px;
   border-style: solid;
-  scale: 1.05;
 }
 
-.dark-mode #project .btn:hover {
+.dark-mode #project-section .btn:hover {
   color: rgb(255, 255, 255);
   background: #212121;
   border-color: rgb(255, 194, 0);
   border-width: 2px;
   border-style: solid;
-  scale: 1.05;
+
 }
 
-#project .hidden {
+#project-section .hidden {
   display: none;
 }
 
@@ -1199,6 +1276,7 @@ strong {
   transform: translateY(-50%);
   border: 2px solid rgba(100, 111, 135, 0.58);
   border-radius: 50px;
+  z-index: 999999 !important;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .header_social {
@@ -1233,7 +1311,7 @@ strong {
   }
 }
 .header_social li a:hover {
-  color: #ffc200;
+  color: #ffc200 !important;
 }
 
 .button-12 {
@@ -1422,3 +1500,197 @@ strong {
   transform: translateY(0); /* Posição original */
 }
 
+/* Estilos para as tabs  */
+.tabs-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tabs {
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
+  margin: 0;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+@media (max-width: 991px) {
+  .tab {
+    padding: 8px 16px;
+    font-size: 15px;
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tab {
+    padding: 6px 12px;
+    font-size: 14px;
+    margin: 0 6px;
+  }
+}
+
+
+@media (max-width: 580px) {
+  .tab {
+    padding: 4px 6px;
+    font-size: 13px;
+    margin: 0 4px;
+  }
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+
+
+.tab:hover {
+  background-color: #ddd;
+}
+
+.active-tab {
+  background-color: #ff9000;
+  color: white;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.project-card {
+  display: none;
+  background-color: #fff;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  height: 100%;
+  margin: 10px;
+  text-align: justify;
+  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+
+.project-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #000;
+}
+
+  .project-card:hover {
+    transform: translateY(-10px);
+    border-color: #ffa516;
+    opacity: 0.8;
+  }
+
+  .project-card:hover h3 {
+    color: #ffa516;
+  }
+
+.project-card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.project-card p .button-12{
+  color: #fff;
+}
+
+.project-card  .project-frameworks {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 15px; 
+    padding: 2px; 
+    box-sizing: border-box; 
+  }
+
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .project-card:hover .card-overlay {
+    opacity: 1;
+  }
+  
+  .card-overlay .button-12 {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffa516;
+    color: #fff;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .card-overlay .button-12:hover {
+    background-color: #ff9000; /* Escurece o botão ao passar o mouse */
+  }
+
+.active {
+  display: block;
+}
+
+.data-science {
+  display: none;
+}
+
+.development {
+  display: none;
+}
+
+
+.hidden-slide {
+  opacity: 0;
+  transform: translateX(50%);
+  transition: all 0.8s ease-out;
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hidden-fade {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}

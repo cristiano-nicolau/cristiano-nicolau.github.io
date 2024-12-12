@@ -73,7 +73,6 @@
     </div>
   </nav>
   <section class="home full-screen d-flex justify-content-center align-items-center text-left" id="home">
-
     <div class="container">
       <div class="row justify-content-center align-items-center ">
         <div class="col-lg-7 col-md-12 col-12">
@@ -92,17 +91,20 @@
             <p></p>
 
             <div class="custom-btn-group mt-4">
-              <a href="/assets/CV-Cristiano-Nicolau.pdf" class="btn mr-lg-2 custom-btn" download><i
-                  class='uil uil-file-alt'></i> Download Resume</a>
-              <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Contact Info</a>
+              <a href="/assets/CV-Cristiano-Nicolau.pdf" class="btn custom-btn custom-btn-bg custom-btn-link"
+                download><i class='uil uil-file-alt'></i> Download Resume</a>
+              <!-- <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Contact Info</a> -->
             </div>
 
           </div>
         </div>
         <ul class="header_social d-none d-lg-block">
-          <li><a href="#"><i class="uil uil-github"></i></a></li>
-          <li><a href="#"><i class="uil uil-instagram"></i></a></li>
-          <li><a href="#"><i class="uil uil-linkedin-alt"></i></a></li>
+          <li><a href="https://www.instagram.com/cristiano_nicolau/"><i class="uil uil-instagram"></i></a></li>
+          <!-- <li><a href="#"><i class="icon-facebook-with-circle"></i></a></li> -->
+          <li><a href="mailto:10cccristiano@gmail.com"><i class="uil uil-envelope-alt"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/cristiano-nicolau-b79745269/"><i class="uil uil-linkedin"></i></a>
+          </li>
+          <li><a href="https://www.github.com/cristiano-nicolau"><i class="uil uil-github-alt"></i></a></li>
         </ul>
       </div>
       <div>
@@ -210,7 +212,7 @@
   </section>
 
   <!-- EDUCATION -->
-  <section class="education py-5" id="education">
+  <section class="education py-5" id="education-section">
     <div class="container">
       <div class="row text-center justify-content-center align-items-center">
         <h2>My Education</h2>
@@ -276,124 +278,289 @@
         </div>
       </div>
     </div>
+  </section>
 
-
-    <section class="project py-5" id="project">
-      
-      <div class="container proj">
+    <section class="project py-5" id="project-section">
+      <div class="container">
         <div class="row text-center justify-content-center align-items-center">
           <h2>My Projects</h2>
         </div>
-        <ol id="projectList" style="--length: 10" role="list">
-          <li class="project-item" style="--i: 1">
-            <h3>WisH - Where is Home <a href="https://github.com/Wish-Where-is-Home"><i
-                  class="icon-github-with-circle"></i></a></h3>
-            <p> WisH: Where is Home is an innovative and personalized real estate research platform, instead of
-              focusing only on the physical characteristics of properties, it takes into account the individual
-              preferences of buyers, allowing them to explore areas of interest based on metrics relevant additional
-              information
+        <div class="tabs-container py-3">
+          <ul class="tabs">
+            <li class="tab" data-filter="all">All</li>
+            <li class="tab" data-filter="data-science">Data Science</li>
+            <li class="tab" data-filter="web-development">Web Development</li>
+            <li class="tab" data-filter="mobile-development">Mobile Development</li>
+          </ul>
+        </div>
+
+        <!-- Conteúdo dos projetos -->
+        <div class="projects-container">
+          <div class="project-card web-development">
+            <h3 class="project-title">WisH - Where is Home</h3>
+            <p class="project-description">
+              WisH: Where is Home is an innovative and personalized real estate research platform, instead of focusing
+              only on the physical characteristics of properties, it takes into account the individual preferences of
+              buyers, allowing them to explore areas of interest based on metrics relevant additional information
             </p>
-            <span><strong>ReactJs, GeoServer, PostgreSQL, PostGis, Django, Docker, GitHub Projects</strong></span>
-          </li>
-          <li class="project-item" style="--i: 2">
-            <h3>PeTicket<a href="https://github.com/PeTicket/PeTicket"><i class="icon-github-with-circle"></i></a></h3>
-            <p> The PeTicket application aims to provide a streamlined and modern solution for veterinary care,
-              addressing
+            <p class="project-frameworks">
+              <button class="button-12" role="button">ReactJs</button>
+              <button class="button-12" role="button">GeoServer</button>
+              <button class="button-12" role="button">PostgreSQL</button>
+              <button class="button-12" role="button">PostGis</button>
+              <button class="button-12" role="button">Django</button>
+              <button class="button-12" role="button">Docker</button>
+              <button class="button-12" role="button">GitHub Projects</button>
+            </p>
+            <div class="card-overlay">
+              <a href="https://github.com/Wish-Where-is-Home" class="project-link" target="_blank">
+                <button class="button-12">
+                  <GitHub class="uil uil-github">GitHub</i>
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card web-development">
+            <h3 class="project-title">PeTicket</h3>
+            <p class="project-description">
+              The PeTicket application aims to provide a streamlined and modern solution for veterinary care, addressing
               the high-level business problem of inefficient appointment scheduling, fragmented medical record
-              management,
-              and suboptimal consultation management in veterinary clinics. </p>
-            <span><strong>HTML, CSS, JavaScript, Spring Boot, MySQL, RabbitMQ,
-                Jira </strong></span>
-          </li>
-          <li class="project-item" style="--i: 3">
-            <h3>SensorSafe<a href="https://github.com/cristiano-nicolau/SensorSafe"><i
-                  class="icon-github-with-circle"></i></a></h3>
-            <p>Enable users to proactively manage sensor data for fire detection, temperature control, and humidity
-              monitoring, contributing to a safer living and working environment.</p>
-            <span><strong>ReactJS, NodeJS, Spring Boot, RabbitMQ,
-                Python, GitHub Projetcs </strong></span>
-          </li>
-          <li class="project-item" style="--i: 4">
-            <h3>TravelEase<a href="https://github.com/cristiano-nicolau/TravelEase"><i
-                  class="icon-github-with-circle"></i></a></h3>
-            <p>This is a project for booking bus tickets. You can see the list of available buses for the date you
+              management, and suboptimal consultation management in veterinary clinics.
+            </p>
+            <p class="project-frameworks">
+              <button class="button-12" role="button">HTML</button>
+              <button class="button-12" role="button">CSS</button>
+              <button class="button-12" role="button">JavaScript</button>
+              <button class="button-12" role="button">Spring Boot</button>
+              <button class="button-12" role="button">MySQL</button>
+              <button class="button-12" role="button">RabbitMQ</button>
+              <button class="button-12" role="button">Jira</button>
+              <button class="button-12" role="button">SonarQube</button>
+              <button class="button-12" role="button">CI/CD</button>
+              <button class="button-12" role="button">Testing</button>
+            </p>
+            <div class="card-overlay">
+              <a href="https://github.com/PeTicket/PeTicket" class="project-link" target="_blank">
+                <button class="button-12">
+                  <GitHub class="uil uil-github">GitHub</i>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="project-card web-development">
+            <h3 class="project-title">TravelEase</h3>
+            <p class="project-description">
+              This is a project for booking bus tickets. You can see the list of available buses for the date you
               chosose, see the details of the bus, and book a ticket. The main purpose of this project is to learn how
-              to
-              do a unit tests and integration tests in Spring Boot for the backend. </p>
-            <span><strong>Spring Boot, HTML, CSS, JS, Docker, MySQL</strong></span>
-          </li>
-          <li class="project-item hidden" style="--i: 5">
-            <h3>e-commerce store vulnerabilities<a
-                href="https://github.com/cristiano-nicolau/e-commerce_store_vulnerabilities"><i
-                  class="icon-github-with-circle"></i></a></h3>
-            <p> This project consists an e-commerce store about DETI, however the main objective was to present both
-              vulnerable and secure application along with all the vulnerabilities encountered.</p>
-            <span><strong>HTML, CSS, JavaScript, Python-Flask,
-                SQLite </strong></span>
-          </li>
-          <li class="project-item hidden" style="--i: 6">
-            <h3>sudoku_solver distributed<a href="https://github.com/cristiano-nicolau/sudoku_solver_distributed"><i
-                  class="icon-github-with-circle"></i></a></h3>
-            <p> This project consists of a distributed system that solves sudoku puzzles. The system is composed of a
-              client and a server. The client sends the sudoku puzzle to the server, which solves it and returns the
-              solution to the client. </p>
-            <span><strong>Python</strong></span>
-          </li>
-          <li class="project-item hidden" style="--i: 7">
-            <h3>Youtube Database<a href="https://github.com/cristiano-nicolau/BD/tree/main/Projeto_Final"><i
-                  class="icon-github-with-circle"></i></a></h3>
-            <p> Our final project is a database modeling for the YouTube platform. It allows users to upload, share,
-              and view various types of content. Users can subscribe to other users, like and comment on content,
-              create playlists, and also subscribe to the premium service.</p>
-            <span><strong>MySQL, C#</strong></span>
-          </li>
-          <li class="project-item hidden" style="--i: 8">
-            <h3>DigDug - AI<a href="https://github.com/cristiano-nicolau/IA/tree/main/TPG-ia_107323_108536"><i
-                  class="icon-github-with-circle"></i></a></h3>
-            <p>This project consists of an AI that plays the game DigDug. The main objective was to develop an AI
-              that
-              could play the game autonomously and achieve the highest score possible. (20k points)</p>
-            <span><strong>Python</strong></span>
-          </li>
-          <li class="project-item hidden" style="--i: 9">
-            <h3>UniEvents<a href="https://github.com/cristiano-nicolau/UniEvents"><i
-                  class="icon-github-with-circle"></i></a></h3>
-            <p>UniEvents is a mobile application designed to streamline the event attendance experience for university
-              students and event coordinators. Users can browse upcoming lectures and seminars, access event details,
-              and
-              register for events. The app features integrated mapping for easy navigation and digital ticketing for
-              efficient check-ins. Click here to sse the demo.</p>
-            <span><strong>Kotlin, SQLite, Firebase</strong></span>
-          </li>
-          <li class="project-item hidden" style="--i: 10">
-            <h3>message_broker distributed_systems<a
-                href="https://github.com/cristiano-nicolau/message_broker-distributed_systems"><i
-                  class="icon-github-with-circle"></i></a></h3>
-            <p>This project consists of a message broker that allows the communication between different services in a
+              to do a unit tests and integration tests in Spring Boot for the backend. </p>
+            <p class="project-frameworks">
+              <button class="button-12" role="button">HTML</button>
+              <button class="button-12" role="button">CSS</button>
+              <button class="button-12" role="button">JS</button>
+              <button class="button-12" role="button">Spring Boot</button>
+              <button class="button-12" role="button">Docker</button>
+              <button class="button-12" role="button">MySQL</button>
+              <button class="button-12" role="button">Integration Testing</button>
+              <button class="button-12" role="button">Unit Testing</button>
+            </p>
+            <div class="card-overlay">
+              <a href="https://github.com/cristiano-nicolau/TravelEase" class="project-link" target="_blank">
+                <button class="button-12">
+                  <GitHub class="uil uil-github">GitHub</i>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="project-card web-development">
+            <h3 class="project-title">SensorSafe</h3>
+            <p class="project-description">
+              Enable users to proactively manage sensor data for fire detection, temperature control, and humidity
+              monitoring, contributing to a safer living and working environment.
+            </p>
+            <p class="project-frameworks">
+              <button class="button-12" role="button">ReactJS</button>
+              <button class="button-12" role="button">NodeJS</button>
+              <button class="button-12" role="button">Spring Boot</button>
+              <button class="button-12" role="button">RabbitMQ</button>
+              <button class="button-12" role="button">Python</button>
+              <button class="button-12" role="button">GitHub Projects</button>
+            </p>
+            <div class="card-overlay">
+              <a href="https://github.com/cristiano-nicolau/SensorSafe" class="project-link" target="_blank">
+                <button class="button-12">
+                  <GitHub class="uil uil-github">GitHub</i>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="project-card web-development">
+            <h3 class="project-title">E-commerce Store</h3>
+            <p class="project-description">
+              This project consists an e-commerce store about DETI, however the main objective was to present both
+              vulnerable and secure application along with all the vulnerabilities encountered.
+            </p>
+            <p class="project-frameworks">
+              <button class="button-12" role="button">HTML</button>
+              <button class="button-12" role="button">CSS</button>
+              <button class="button-12" role="button">JavaScript</button>
+              <button class="button-12" role="button">Python-Flask</button>
+              <button class="button-12" role="button">SQLite</button>
+            </p>
+            <div class="card-overlay">
+              <a href="https://github.com/cristiano-nicolau/e-commerce_store_vulnerabilities" class="project-link"
+                target="_blank">
+                <button class="button-12">
+                  <GitHub class="uil uil-github">GitHub</i>
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card web-development">
+            <h3 class="project-title">Sudoku Solver Distributed</h3>
+            <p class="project-description">
+              This project consists of a sudoku solver that uses backtracking to solve the puzzle. The main objective
+              was to develop an algorithm that could solve any sudoku puzzle, regardless of its difficulty.
+            </p>
+            <p class="project-frameworks">
+              <button class="button-12" role="button">Python</button>
+            </p>
+            <div class="card-overlay">
+              <a href="https://github.com/cristiano-nicolau/sudoku_solver_distributed" class="project-link"
+                target="_blank">
+                <button class="button-12">
+                  <GitHub class="uil uil-github">GitHub</i>
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card web-development">
+            <h3 class="project-title">Youtube Database</h3>
+            <p class="project-description">
+              Our final project is a database modeling for the YouTube platform. It allows users to upload, share, and
+              view various types of content. Users can subscribe to other users, like and comment on content, create
+              playlists, and also subscribe to the premium service.
+            </p>
+            <p class="project-frameworks">
+              <button class="button-12" role="button">MySQL</button>
+              <button class="button-12" role="button">C#</button>
+            </p>
+            <div class="card-overlay">
+              <a href="https://github.com/cristiano-nicolau/BD/tree/main/Projeto_Final" class="project-link"
+                target="_blank">
+                <button class="button-12">
+                  <GitHub class="uil uil-github">GitHub</i>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="project-card web-development">
+            <h3 class="project-title">DigDug - AI</h3>
+            <p class="project-description">
+              This project consists of an AI that plays the game DigDug. The main objective was to develop an AI that
+              could play the game autonomously and achieve the highest score possible. (20k points)
+            </p>
+            <p class="project-frameworks">
+              <button class="button-12" role="button">Python</button>
+            </p>
+            <div class="card-overlay">
+              <a href="https://github.com/cristiano-nicolau/IA/tree/main/TPG-ia_107323_108536" class="project-link"
+                target="_blank">
+                <button class="button-12">
+                  <GitHub class="uil uil-github">GitHub</i>
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card web-development">
+            <h3 class="project-title">message_broker distributed_systems</h3>
+            <p class="project-description">
+              This project consists of a message broker that allows the communication between different services in a
               distributed system. The message broker is responsible for receiving messages from producers and delivering
               them to consumers. The message broker also ensures that messages are delivered in the correct order and
               that
-              they are not lost.</p>
-            <span><strong>Python</strong></span>
-          </li>
-          <li class="project-item hidden" style="--i: 11">
-            <h3>PulsePath<a href="https://github.com/cristiano-nicolau/PulsePath"><i
-                  class="icon-github-with-circle"></i></a></h3>
-            <p>The core concept of our application revolves around a comprehensive fitness and wellness tracking system,
+              they are not lost.
+            </p>
+            <p class="project-frameworks">
+              <button class="button-12" role="button">Python</button>
+            </p>
+            <div class="card-overlay">
+              <a href="https://github.com/cristiano-nicolau/message_broker-distributed_systems" class="project-link"
+                target="_blank">
+                <button class="button-12">
+                  <GitHub class="uil uil-github">GitHub</i>
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card web-development">
+            <h3 class="project-title">Syncall</h3>
+            <p class="project-description">
+              Syncal is a Web Aplication that gives users a calendar synchronizer where work groups, projects, friends
+              can
+              set dates to meet more easily. It also has the function of a personal agenda.
+            </p>
+            <p class="project-frameworks">
+              <button class="button-12" role="button">ReactJS</button>
+            </p>
+            <div class="card-overlay">
+              <a href="https://github.com/cristiano-nicolau/Syncal" class="project-link" target="_blank">
+                <button class="button-12">
+                  <GitHub class="uil uil-github">GitHub</i>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="project-card mobile-development">
+            <h3 class="project-title">UniEvents</h3>
+            <p class="project-description">
+              UniEvents is a mobile application designed to streamline the event attendance experience for university
+              students and event coordinators. Users can browse upcoming lectures and seminars, access event details,
+              and register for events. The app features integrated mapping for easy navigation and digital ticketing for
+              efficient check-ins. Click here to sse the demo.
+            </p>
+            <p class="project-frameworks">
+              <button class="button-12" role="button">Kotlin</button>
+              <button class="button-12" role="button">SQLite</button>
+              <button class="button-12" role="button">Firebase</button>
+            </p>
+            <div class="card-overlay">
+              <a href="https://github.com/cristiano-nicolau/UniEvents" class="project-link" target="_blank">
+                <button class="button-12">
+                  <GitHub class="uil uil-github">GitHub</i>
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card mobile-development">
+            <h3 class="project-title">PulsePath</h3>
+            <p class="project-description">
+              The core concept of our application revolves around a comprehensive fitness and wellness tracking system,
               designed to operate seamlessly across Android smartphones and WearOS devices. The innovation lies in its
               dual-platform functionality, which not only facilitates rigorous fitness tracking but also integrates
-              wellness monitoring into the user's daily routine. </p>
-            <span><strong>Dart, SQLite, Flutter</strong></span>
-          </li>
-          <li class="project-item hidden" style="--i: 12">
-            <h3>Syncall<a href="https://github.com/cristiano-nicolau/Syncal"><i class="icon-github-with-circle"></i></a>
-            </h3>
-            <p> Syncal is a Web Aplication that gives users a calendar synchronizer where work groups, projects,
-              friends can set dates to meet more easily. It also has the function of a personal agenda.</p>
-            <span><strong>ReactJS</strong></span>
-          </li>
-        </ol>
-        <div class="text-center">
+              wellness monitoring into the user's daily routine.
+            </p>
+            <p class="project-frameworks">
+              <button class="button-12" role="button">Dart</button>
+              <button class="button-12" role="button">SQLite</button>
+              <button class="button-12" role="button">Flutter</button>
+            </p>
+            <div class="card-overlay">
+              <a href="https://github.com/cristiano-nicolau/PulsePath" class="project-link" target="_blank">
+                <button class="button-12">
+                  <GitHub class="uil uil-github">GitHub</i>
+                </button>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+        <div class="justify-content-center align-items-center text-center d-flex">
           <button class="btn" id="customBtn">More Projects</button>
         </div>
       </div>
@@ -423,7 +590,7 @@
               </p>
             </div>
           </div>
-          
+
           <!-- Mobile Development -->
           <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative d-flex flex-column align-items-center text-center">
@@ -439,7 +606,7 @@
               </p>
             </div>
           </div>
-        
+
           <!-- Web Development -->
           <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative d-flex flex-column align-items-center text-center">
@@ -460,7 +627,7 @@
               </p>
             </div>
           </div>
-        
+
           <!-- Data Science & AI -->
           <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative d-flex flex-column align-items-center text-center">
@@ -483,7 +650,7 @@
               </p>
             </div>
           </div>
-        
+
           <!-- Operating Systems & Tools -->
           <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="500">
             <div class="service-item position-relative d-flex flex-column align-items-center text-center">
@@ -506,7 +673,7 @@
               </p>
             </div>
           </div>
-        
+
           <!-- Databases -->
           <div class="col-lg-4 col-md-6 mt-4" data-aos="fade-up" data-aos-delay="600">
             <div class="service-item position-relative d-flex flex-column align-items-center text-center">
@@ -526,8 +693,8 @@
             </div>
           </div>
         </div>
-        
-        
+
+
       </div>
     </section>
 
@@ -538,7 +705,7 @@
           <h2>Interested to work together? Let's talk</h2>
         </div>
         <p>
-        <ul class="fh5co-social-icons">
+        <ul class="fh5co-social-icons py-3">
           <li><a href="https://www.instagram.com/cristiano_nicolau/"><i class="uil uil-instagram"></i></a>
           </li>
           <!-- <li><a href="#"><i class="icon-facebook-with-circle"></i></a></li> -->
@@ -556,17 +723,18 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-12">
             <ul class="footer_menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Service</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#resume">Experience</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#project">Projects</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
 
 

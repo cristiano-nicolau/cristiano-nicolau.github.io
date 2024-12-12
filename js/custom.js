@@ -119,15 +119,14 @@
     });
   }
 
-  // Initialize particles on page load
   initParticles();
 
   // COLOR MODE
   $('.color-mode').click(function(){
     $('.color-mode-icon').toggleClass('active');
     $('body').toggleClass('dark-mode');
-    $('#particles-js').html(''); // Clear existing particles
-    initParticles(); // Reinitialize particles with new color scheme
+    $('#particles-js').html('');
+    initParticles(); 
   });
 
   // HEADER
@@ -185,166 +184,230 @@ window.addEventListener('load', function() {
   setTimeout(function() {
       document.getElementById('preloader').classList.add('hidden');
       document.getElementById('loader').classList.add('hidden');
-  }, 500); // 3000 milissegundos = 3 segundos
+  }, 500); 
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const loadMoreBtn = document.getElementById('customBtn');
-  const projectItems = document.querySelectorAll('.project-item');
-  let currentIndex = 4;
-  const itemsToShow = 4;
-
-  function updateButton() {
-    if (currentIndex >= projectItems.length) {
-      loadMoreBtn.textContent = 'Show Less';
-    } else {
-      loadMoreBtn.textContent = 'More Projects';
-    }
-  }
-
-  function showItems(start, end) {
-    for (let i = start; i < end && i < projectItems.length; i++) {
-      projectItems[i].classList.remove('hidden');
-    }
-  }
-
-  function hideItems(start, end) {
-    for (let i = start; i < end && i < projectItems.length; i++) {
-      projectItems[i].classList.add('hidden');
-    }
-  }
-
-  function goToTopProjects() {
-    const topProjects = document.getElementById('project');
-    topProjects.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  showItems(0, currentIndex);
-  updateButton();
-
-  loadMoreBtn.addEventListener('click', () => {
-    if (currentIndex < projectItems.length) {
-      showItems(currentIndex, currentIndex + itemsToShow);
-      currentIndex += itemsToShow;
-    } else {
-      hideItems(itemsToShow, projectItems.length);
-      currentIndex = itemsToShow;
-      goToTopProjects();
-    }
-    updateButton();
-  });
-});
 
 document.addEventListener('DOMContentLoaded', function() {
   function checkScreenSize() {
     const aboutSection = document.getElementById('about');
-    if (window.innerWidth <= 768) { // Define the breakpoint for mobile devices
+    if (window.innerWidth <= 768) { 
       aboutSection.classList.remove('full-screen');
       const container = aboutSection.querySelector('.container');
       container.style.paddingTop = '1rem';
     }
   }
 
-  // Check screen size on page load
   checkScreenSize();
 
-  // Optional: Check screen size on window resize
   window.addEventListener('resize', checkScreenSize);
 });
 
-// Seleciona todos os elementos com as classes de animação
 const timelineItems = document.querySelectorAll(".timeline-inverted, .timeline-unverted");
 
-// Configura o IntersectionObserver
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("animate-visible"); // Adiciona a classe para ativar a animação
+        entry.target.classList.add("animate-visible"); 
       }
     });
   },
   {
-    threshold: 0.2, // Define quanto do elemento precisa estar visível para ativar
+    threshold: 0.2, 
   }
 );
 
-// Observa cada item da timeline
 timelineItems.forEach((item) => observer.observe(item));
 
 
-// Seleciona todos os parágrafos dentro da seção "About Me"
 const aboutParagraphs = document.querySelectorAll(".about-text p");
 
-// Configura o IntersectionObserver
 const aboutObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("animate-visible"); // Adiciona a classe para ativar a animação
+        entry.target.classList.add("animate-visible"); 
       }
     });
   },
   {
-    threshold: 0.2, // Define quanto do elemento precisa estar visível para ativar
+    threshold: 0.2, 
   }
 );
 
-// Observa cada parágrafo
 aboutParagraphs.forEach((p) => aboutObserver.observe(p));
 
 
-// Selecionar os elementos para animar
 const animatedElements = document.querySelectorAll(
   ".about-text, .header_social, .mouse-wrap"
 );
 
-// Configurar o IntersectionObserver
 const first_page = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("animate-visible"); // Adiciona classe para animar
-        first_page.unobserve(entry.target); // Para de observar após animar
+        entry.target.classList.add("animate-visible");
+        first_page.unobserve(entry.target); 
       }
     });
   },
   {
-    threshold: 0.1, // Percentual do elemento visível necessário para ativar
+    threshold: 0.1, 
   }
 );
 
-// Observar cada elemento
 animatedElements.forEach((el) => first_page.observe(el));
 
 
-// Seleciona todos os elementos com a classe "service-item"
 const serviceItems = document.querySelectorAll(".service-item");
 
-// Configura o IntersectionObserver
 const service_observer = new IntersectionObserver(
   (entries, service_observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const element = entry.target;
-        const delay = element.getAttribute("data-aos-delay"); // Obtém o atraso configurado
+        const delay = element.getAttribute("data-aos-delay"); 
 
-        // Aplica a animação com o atraso
         setTimeout(() => {
           element.classList.add("animate-visible");
         }, delay);
 
-        service_observer.unobserve(element); // Para de observar após animar
+        service_observer.unobserve(element);
       }
     });
   },
   {
-    threshold: 0.1, // Percentual do elemento visível necessário para ativar
+    threshold: 0.2, 
   }
 );
 
 // Observa cada elemento
 serviceItems.forEach((item) => service_observer.observe(item));
+document.addEventListener('DOMContentLoaded', function () {
+  const tabs = document.querySelectorAll(".tab");
+  const projectCards = document.querySelectorAll(".project-card");
+  const loadMoreBtn = document.getElementById('customBtn');
+  const itemsToShow = 6;
+  let currentIndex = itemsToShow;
+  let currentFilter = "all"; // Variável para armazenar o filtro ativo
+
+  // Tab Filtering
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const filter = tab.getAttribute("data-filter");
+
+      // Remove "active" class from all tabs and set it for the clicked tab
+      tabs.forEach(tab => tab.classList.remove("active-tab"));
+      tab.classList.add("active-tab");
+
+      currentFilter = filter; // Atualiza o filtro ativo
+
+      // Filter projects
+      projectCards.forEach(card => {
+        if (filter === "all" || card.classList.contains(filter)) {
+          card.style.display = "block"; // Show filtered cards
+        } else {
+          card.style.display = "none"; // Hide non-matching cards
+        }
+      });
+
+      // Update button and visibility for the selected filter
+      if (filter === "all") {
+        loadMoreBtn.style.display = "block"; // Show button for "all" filter
+        projectCards.forEach((card, index) => {
+          card.classList.toggle('hidden', index >= itemsToShow); // Hide cards beyond 6 initially
+        });
+        currentIndex = itemsToShow;
+        updateButton();
+      } else {
+        loadMoreBtn.style.display = "none"; // Hide button for other filters
+        projectCards.forEach((card, index) => {
+          card.classList.remove('hidden'); // Make sure all cards are visible for non-"all" filters
+        });
+        currentIndex = projectCards.length; // Show all cards for non-"all" filters
+      }
+    });
+  });
+
+  // Initial Click to Set "All" as Default Tab
+  document.querySelector(".tab[data-filter='all']").click();
+
+  // Update button text based on the current index
+  function updateButton() {
+    if (currentFilter === "all") {
+      if (currentIndex >= projectCards.length) {
+        loadMoreBtn.innerText = "Show Less"; // Change text if no more projects
+      } else {
+        loadMoreBtn.innerText = "Show More"; // Reset text when there are more projects
+      }
+    }
+  }
+
+  // Load More Projects or Show Less Projects
+  loadMoreBtn.addEventListener('click', () => {
+    if (currentFilter === "all") {
+      // If we are at the "all" filter
+      if (currentIndex >= projectCards.length) {
+        // Show "Show More" if we are at the end
+        projectCards.forEach((card, index) => {
+          if (index >= itemsToShow) {
+            card.classList.add('hidden'); // Hide all projects beyond 6
+          }
+        });
+        currentIndex = itemsToShow; // Reset current index
+        loadMoreBtn.innerText = "Show More";
+        // Smooth scroll to the top of the projects section
+        document.querySelector('#project-section').scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Show more projects
+        const hiddenItems = [...projectCards].filter(card => card.classList.contains('hidden'));
+        hiddenItems.slice(0, itemsToShow).forEach(card => card.classList.remove('hidden'));
+        currentIndex += itemsToShow; // Increase the current index
+        loadMoreBtn.innerText = "Show Less";
+      }
+      updateButton();
+    }
+    // For other filters, we don't change the visibility anymore since all items are already shown
+  });
+
+  // Animation with IntersectionObserver
+  const observerOptions = {
+    threshold: 0.2,
+  };
+
+  const tabsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("slide-in");
+      }
+    });
+  }, observerOptions);
+
+  const cardsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+      }
+    });
+  }, observerOptions);
+
+  // Add Observers for animation
+  tabs.forEach(tab => {
+    tab.classList.add("hidden-slide");
+    tabsObserver.observe(tab);
+  });
+
+  projectCards.forEach((card, index) => {
+    if (index >= itemsToShow) card.classList.add('hidden'); // Hide cards after the first 6 initially
+    card.classList.add("hidden-fade");
+    cardsObserver.observe(card);
+  });
+});
 
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector(".tab").click();
+});
