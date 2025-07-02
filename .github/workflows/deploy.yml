@@ -25,7 +25,7 @@ jobs:
         working-directory: ./portfolio-website
 
       - name: Build static site
-        run: pnpm build && pnpm exec next export
+        run: pnpm build
         working-directory: ./portfolio-website
 
       - name: Deploy to GitHub Pages
