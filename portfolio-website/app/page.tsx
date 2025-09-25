@@ -385,7 +385,7 @@ const social_media = [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/cristiano-nicolau-b79745269/",
+    url: "https://www.linkedin.com/in/cristianonicolau/",
     icon: Linkedin,
   },
   {
@@ -812,7 +812,7 @@ export default function Portfolio() {
             </div>
             
             {/* Search Bar - Only visible on tablet and desktop */}
-            <div className="relative max-w-xl lg:max-w-2xl hidden md:block group">
+            <div className="relative w-[calc(75%-theme(spacing.12))] lg:w-80 xl:w-[22rem] hidden md:block group">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 w-4 h-4" />
               <Input
               type="text"
