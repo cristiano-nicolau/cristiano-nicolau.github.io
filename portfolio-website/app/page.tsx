@@ -16,10 +16,12 @@ import {
   Sun,
   Moon,
   ExternalLink,
+  Search,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
 
 const projects = [
   // Top Featured Projects
@@ -447,6 +449,7 @@ export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [visibleProjects, setVisibleProjects] = useState(4);
+  const [searchTerm, setSearchTerm] = useState("");
   const [socialMedia, setSocialMedia] = useState(social_media);
   const [isDark, setIsDark] = useState(false);
 
@@ -458,15 +461,22 @@ export default function Portfolio() {
     "AI/ML",
     "Mobile",
   ];
-  const filteredProjects =
-    selectedCategory === "All"
-      ? projects
-      : projects.filter((p) => p.category === selectedCategory);
+  
+  const filteredProjects = projects.filter((project) => {
+    const matchesCategory = selectedCategory === "All" || project.category === selectedCategory;
+    const matchesSearch = searchTerm === "" || 
+      project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.tech.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase())) ||
+      project.category.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    return matchesCategory && matchesSearch;
+  });
 
-  // Reset visible projects when category changes
+  // Reset visible projects when category or search term changes
   useEffect(() => {
     setVisibleProjects(4);
-  }, [selectedCategory]);
+  }, [selectedCategory, searchTerm]);
   // Intersection observers for animations
   const [aboutRef, aboutInView] = useIntersectionObserver({ threshold: 0.2 });
   const [workRef, workInView] = useIntersectionObserver({ threshold: 0.1 });
@@ -533,7 +543,7 @@ export default function Portfolio() {
       {/* Navigation */}
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-700 ease-out ${
-          isScrolled
+          isScrolled || isMenuOpen
             ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm"
             : "bg-transparent"
         }`}
@@ -782,24 +792,58 @@ export default function Portfolio() {
           </div>
           {/* Filters */}
           <div
-            className={`flex flex-wrap gap-2 mb-12 transition-all duration-1000 ease-out justify-center sm:justify-start`}
+            className={`flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-12 transition-all duration-1000 ease-out`}
           >
-            {categories.map((category) => (
+            {/* Category Filters */}
+            <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 text-sm rounded-full transition-all duration-300 hover:scale-105 ${
+                    selectedCategory === category
+                      ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg"
+                      : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700"
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+            
+            {/* Search Bar - Only visible on tablet and desktop */}
+            <div className="relative max-w-xl lg:max-w-2xl hidden md:block group">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 w-4 h-4" />
+              <Input
+              type="text"
+              placeholder="Search projects by name, tech stack, or area..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pl-10 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-gray-400 dark:focus:border-gray-500 transition-colors duration-300"
+              />
+              {searchTerm && (
               <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 text-sm rounded-full transition-all duration-300 hover:scale-105 ${
-                  selectedCategory === category
-                    ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg"
-                    : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700"
-                }`}
+                type="button"
+                onClick={() => setSearchTerm("")}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
               >
-                {category}
+                <X className="w-4 h-4" />
               </button>
-            ))}
+              )}
+            </div>
           </div>
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {filteredProjects.length === 0 ? (
+            <div className="text-center py-16">
+              <p className="text-gray-500 dark:text-gray-400 text-lg mb-4">
+                No projects found matching your search criteria.
+              </p>
+              <p className="text-gray-400 dark:text-gray-500 text-sm">
+                Try adjusting your search term or category filter.
+              </p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {filteredProjects
               .slice(0, visibleProjects)
               .map((project, index) => (
@@ -898,7 +942,8 @@ export default function Portfolio() {
                   </div>
                 </Card>
               ))}
-          </div>
+            </div>
+          )}
           {/* Show/Hide projects controls */}
           {filteredProjects.length > 4 && (
             <div className="text-center mt-12 flex flex-col items-center gap-4">
