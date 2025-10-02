@@ -1006,11 +1006,13 @@ export default function Portfolio() {
                 title: "Researcher",
                 company:
                   "Centro de Investigação e Desenvolvimento em Matemática e Aplicações (CIDMA)",
-                period: "Feb 2025 - Present",
+                period: "Feb 2025 - Dec 2025",
                 location: "University of Aveiro, Portugal",
-                description:
-                  "In this work, a solution will be developed for communication with Bosch's NEXEED and integration with a Digital Twin, enabling the implementation of real-time anomaly detection algorithms. The project, part of the ILLIANCE agenda, focuses on theoretical and practical solutions to support analytics for Heat Pumps.",
-                stacks: ["Python", "Celery", "Flower", "Docker", "MQTT"],
+                description: [
+                  "Developed a data injector to simulate and transmit events, designing a solution for integration with Bosch’s NEXEED platform and a Digital Twin, allowing to use real-time anomaly detection algorithms within the ILLIANCE agenda project in heat pumps.",
+                  "Developed a email tracking system to map and analyze administrative processes, using NLP techniques to identify and visualize information exchanged in email bodies.",
+                ],
+                stacks: ["Python", "Celery", "Flower", "MQTT", "PostgreSQL", "Streamlit", "LangChain", "Docker"],
               },
               {
                 title: "Backend Developer",
@@ -1070,9 +1072,22 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                  {exp.description}
-                </p>
+                {Array.isArray(exp.description) ? (
+                  exp.description.map((desc, i) => (
+                  <p
+                    key={i}
+                    className={`text-gray-600 dark:text-gray-300 leading-relaxed ${
+                    i < exp.description.length - 1 ? "" : "mb-4"
+                    }`}
+                  >
+                    {desc}
+                  </p>
+                  ))
+                ) : (
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                    {exp.description}
+                  </p>
+                )}
 
                 <div className="flex flex-wrap gap-2">
                   {exp.stacks.map((stack) => (
