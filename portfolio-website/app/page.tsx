@@ -586,7 +586,7 @@ export default function Portfolio() {
                 size="sm"
                 className="hidden md:flex group"
                 onClick={() =>
-                  window.open("/CV-Cristiano_Nicolau.pdf", "_blank")
+                  window.open("/CV-Cristiano-Nicolau.pdf", "_blank")
                 }
               >
                 <Download className="w-4 h-4 mr-2 transition-transform duration-300 group-hover:-translate-y-0.5" />
@@ -912,6 +912,12 @@ export default function Portfolio() {
                         </h3>
                         <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
                           <span>{project.year}</span>
+                          <Badge
+                            variant="outline"
+                            className="text-xs border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300"
+                          >
+                            {project.category}
+                          </Badge>
                           {project.status && (
                             <Badge
                               variant="outline"
@@ -1006,13 +1012,11 @@ export default function Portfolio() {
                 title: "Researcher",
                 company:
                   "Centro de Investigação e Desenvolvimento em Matemática e Aplicações (CIDMA)",
-                period: "Feb 2025 - Dec 2025",
+                period: "Feb 2025 - Present",
                 location: "University of Aveiro, Portugal",
-                description: [
-                  "Developed a data injector to simulate and transmit events, designing a solution for integration with Bosch’s NEXEED platform and a Digital Twin, allowing to use real-time anomaly detection algorithms within the ILLIANCE agenda project in heat pumps.",
-                  "Developed a email tracking system to map and analyze administrative processes, using NLP techniques to identify and visualize information exchanged in email bodies.",
-                ],
-                stacks: ["Python", "Celery", "Flower", "MQTT", "PostgreSQL", "Streamlit", "LangChain", "Docker"],
+                description:
+                  "In this work, a solution will be developed for communication with Bosch's NEXEED and integration with a Digital Twin, enabling the implementation of real-time anomaly detection algorithms. The project, part of the ILLIANCE agenda, focuses on theoretical and practical solutions to support analytics for Heat Pumps.",
+                stacks: ["Python", "Celery", "Flower", "Docker", "MQTT"],
               },
               {
                 title: "Backend Developer",
@@ -1072,22 +1076,9 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                {Array.isArray(exp.description) ? (
-                  exp.description.map((desc, i) => (
-                  <p
-                    key={i}
-                    className={`text-gray-600 dark:text-gray-300 leading-relaxed ${
-                    i < exp.description.length - 1 ? "" : "mb-4"
-                    }`}
-                  >
-                    {desc}
-                  </p>
-                  ))
-                ) : (
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                    {exp.description}
-                  </p>
-                )}
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                  {exp.description}
+                </p>
 
                 <div className="flex flex-wrap gap-2">
                   {exp.stacks.map((stack) => (
@@ -1188,7 +1179,7 @@ export default function Portfolio() {
             <Button
               variant="outline"
               className="border-gray-600 dark:border-gray-700 text-white hover:bg-gray-800 dark:hover:bg-gray-900 px-8 py-3 bg-transparent transition-all duration-300 hover:scale-105 group hover:text-white"
-              onClick={() => window.open("/CV-Cristiano_Nicolau.pdf", "_blank")}
+              onClick={() => window.open("/CV-Cristiano-Nicolau.pdf", "_blank")}
             >
               <Download className="w-4 h-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
               Download Resume
