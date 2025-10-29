@@ -586,7 +586,7 @@ export default function Portfolio() {
                 size="sm"
                 className="hidden md:flex group"
                 onClick={() =>
-                  window.open("/CV-Cristiano-Nicolau.pdf", "_blank")
+                  window.open("/CV-Cristiano_Nicolau.pdf", "_blank")
                 }
               >
                 <Download className="w-4 h-4 mr-2 transition-transform duration-300 group-hover:-translate-y-0.5" />
