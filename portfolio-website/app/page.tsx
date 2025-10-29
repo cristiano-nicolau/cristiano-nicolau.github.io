@@ -1179,7 +1179,7 @@ export default function Portfolio() {
             <Button
               variant="outline"
               className="border-gray-600 dark:border-gray-700 text-white hover:bg-gray-800 dark:hover:bg-gray-900 px-8 py-3 bg-transparent transition-all duration-300 hover:scale-105 group hover:text-white"
-              onClick={() => window.open("/CV-Cristiano-Nicolau.pdf", "_blank")}
+              onClick={() => window.open("/CV-Cristiano_Nicolau.pdf", "_blank")}
             >
               <Download className="w-4 h-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
               Download Resume
