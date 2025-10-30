@@ -26,6 +26,18 @@ import { Input } from "@/components/ui/input";
 const projects = [
   // Top Featured Projects
   {
+    id: 24,
+    title: "Event Injector",
+    description:
+      "The core of the application is an event injector. It processes a data file where each row can contain information about several occurrences. The system reads a single row and “unfolds” it into multiple distinct events, each with its own timestamp, payload, and destination.",
+    tech: ["Python", "Docker", "MQTT", "Celery", "Flower", "Streamlit", "Redis"],
+    category: "Data Science",
+    year: "2025",
+    status: "Research",
+    liveUrl: "",
+    githubUrl: "https://github.com/cristiano-nicolau/event_injector",
+  },
+  {
     id: 23,
     title: "AskSQL",
     description:
